@@ -22,11 +22,8 @@ class ViewController: UIViewController {
     var categoryCount: Int = 0
     
     override func viewDidLoad() {
-         super.viewDidLoad()
+        super.viewDidLoad()
         self.loadCategories()
-        if categoryCount == 0 {
-            self.backButton?.hidden = true
-        }
        
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -50,14 +47,17 @@ class ViewController: UIViewController {
         } else {
             api.auth {
                 (auth, hasSet) in
-                if auth /*&& !hasSet*/ {
+                if !hasSet {
                      self.loadCategories()
+                } else {
+                    println("NO CARGO OSTIAS")
                 }
             }
         }
     }
     
     func launchView() {
+        self.shouldShowBackItem()
         if let cats = self.categories {
             var category = cats[self.categoryCount]
             self.categoryNameLabel?.text = category.name
@@ -67,15 +67,24 @@ class ViewController: UIViewController {
         }
     }
     
+    func shouldShowBackItem() {
+        if categoryCount == 0 {
+            self.backButton?.hidden = true
+        } else {
+            self.backButton?.hidden = false
+        }
+        
+    }
+    
     func convertValueToLikeStep (value: Float) -> Int {
-        return Int(value * 5)
+        return Int(value * 5.0)
     }
     
     @IBAction func clickedLikeButton() {
         if let cats = self.categories {
             
             var category = cats[self.categoryCount]
-            category.value *= 2
+            category.value += 0.2
             if category.value > 1 {
                 category.value = 0.2
             }
@@ -87,6 +96,26 @@ class ViewController: UIViewController {
         var likeStep = convertValueToLikeStep(value)
         var likeImage = UIImage(named: "lovecircle_\(likeStep).png")
         self.categoryLikeImageView?.image = likeImage?
+    }
+    
+    @IBAction func clickedNextButton (){
+        if self.categoryCount+1 >= self.categories?.count {
+            api.postCategories(self.categories!, cb: { (ok) -> () in
+                
+                if ok {
+                    println("everything is good bro")
+                }
+                
+            })
+        } else {
+            self.categoryCount += 1
+            self.launchView()
+        }
+    }
+    
+    @IBAction func clickedBackButton (){
+        self.categoryCount -= 1
+        self.launchView()
     }
     
 
