@@ -16,9 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "accessToken")
+        NSUserDefaults.standardUserDefaults().synchronize()
         // Override point for customization after application launch.
         
-        var api = Api()
+        /*var api = Api()
         
         api.auth {
             (auth, hasSet) in
@@ -34,10 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             } else {
                 api.getArticles({ (art) -> () in
-                    println(art)
+                    println(art[0].stats!.readingTime)
                 })
             }
-        }
+        }*/
         
         return true
     }

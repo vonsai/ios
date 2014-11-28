@@ -37,7 +37,7 @@ class Api {
         if let access = accessToken {
             token = access
         }
-        
+        println("i got token \(token)")
         Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["X-Api-Timestamp": timestamp, "X-Api-Key": apiKey, "X-Api-Signature": requestSignature(timestamp), "X-Api-Token":token]
         
         if method == .GET {

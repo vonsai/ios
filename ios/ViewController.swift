@@ -22,11 +22,12 @@ class ViewController: UIViewController {
     var categoryCount: Int = 0
     
     override func viewDidLoad() {
+         super.viewDidLoad()
         self.loadCategories()
         if categoryCount == 0 {
             self.backButton?.hidden = true
         }
-        super.viewDidLoad()
+       
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -40,9 +41,19 @@ class ViewController: UIViewController {
     }
     
     func loadCategories() {
-        api.getCategories { (cats) -> () in
-            self.categories = cats
-            self.launchView()
+        if api.isAuthenticated {
+            api.getCategories { (cats) -> () in
+                self.categories = cats
+                println(cats)
+                self.launchView()
+            }
+        } else {
+            api.auth {
+                (auth, hasSet) in
+                if auth /*&& !hasSet*/ {
+                     self.loadCategories()
+                }
+            }
         }
     }
     
@@ -62,12 +73,13 @@ class ViewController: UIViewController {
     
     @IBAction func clickedLikeButton() {
         if let cats = self.categories {
-            println("HOLA MIRA")
+            
             var category = cats[self.categoryCount]
             category.value *= 2
             if category.value > 1 {
                 category.value = 0.2
             }
+            changeLikeImageWithValue(category.value)
         }
     }
     
