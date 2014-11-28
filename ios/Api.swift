@@ -19,7 +19,7 @@ class Api {
             NSUserDefaults.standardUserDefaults().setObject(accessToken, forKey: "accessToken")
         }
     }
-    var authenticated: Bool {
+    var isAuthenticated: Bool {
         get {
             return accessToken != nil
         }
@@ -40,13 +40,32 @@ class Api {
         
         Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["X-Api-Timestamp": timestamp, "X-Api-Key": apiKey, "X-Api-Signature": requestSignature(timestamp), "X-Api-Token":token]
         
-        request(method, "\(self.apiBase)\(path)", parameters: parameters, encoding: .JSON).responseSwiftyJSON { (_, _, json, error) -> Void in
+        if method == .GET {
             
-           callback(json, error)
+            request(.GET, "\(self.apiBase)\(path)").responseSwiftyJSON { (_, _, json, error) -> Void in
+                
+                callback(json, error)
+            }
+
+        } else {
+            
+            request(method, "\(self.apiBase)\(path)", parameters: parameters, encoding: .JSON).responseSwiftyJSON { (_, _, json, error) -> Void in
+                
+                callback(json, error)
+            }
         }
+    }
+    func requestSignature(timestamp: String) -> String {
+        
+        //String(Int(NSDate().timeIntervalSince1970))
+        return "\(self.apiSecret) \(timestamp)".sha1()
     }
     
     
+}
+
+// MARK: AUTH
+extension Api {
     func auth(cb: (auth: Bool, hasSetCategories: Bool)->()) {
         
         var body = ["uuid": uuid()]
@@ -60,14 +79,20 @@ class Api {
                     cb (auth: true, hasSetCategories:hasSet)
                 }
             }
-            
         }
-        
     }
-    func requestSignature(timestamp: String) -> String {
-        
-        //String(Int(NSDate().timeIntervalSince1970))
-        return "\(self.apiSecret) \(timestamp)".sha1()
+}
+
+// MARK: CATEGORIES
+extension Api {
+    
+    func getCategories(cb: ([Category]) -> ()){
+    
+        signedRequest(.GET, path:"/categories", parameters:["hi":"bye"]){ (j, e) -> () in
+            
+            println(e)
+            println(j)
+        }
     }
 }
 
