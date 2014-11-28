@@ -24,11 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             (auth, hasSet) in
                 
             println("has set \(hasSet)")
-            api.getCategories { (cats) in
+            if !hasSet {
+                
+                api.getCategories { (cats) in
                     
+                }
             }
         }
-    
         
         return true
     }

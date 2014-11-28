@@ -9,14 +9,16 @@
 import UIKit
 
 class Category {
+    let id: String
     let name: String
     let color: UIColor?
     let imageURL: String?
     
     var value: Float
     
-    init(name:String, value: Float) {
-        self.name = name
-        self.value = value
+    init(data: AnyObject) {
+        self.name = data["name"] as String
+        self.value = data["value"] as Float
+        self.id = data["id"] as String
     }
 }

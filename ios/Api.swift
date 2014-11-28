@@ -70,7 +70,7 @@ extension Api {
         
         var body = ["uuid": uuid()]
         signedRequest(.POST, path: "/auth", parameters: body) { (j, e) -> () in
-            if (e != nil && j["token"]["token"] != nil)  {
+            if e != nil || j["token"]["token"].string == nil {
                 println("ERROR: \(e)")
             } else {
                 
@@ -88,10 +88,21 @@ extension Api {
     
     func getCategories(cb: ([Category]) -> ()){
     
-        signedRequest(.GET, path:"/categories", parameters:["hi":"bye"]){ (j, e) -> () in
+        signedRequest(.GET, path:"/categories", parameters: Dictionary<String, String>()){ (j, e) -> () in
             
-            println(e)
-            println(j)
+            if e != nil || j["categories"].arrayObject == nil {
+                println("ERROR: \(e)")
+                
+            } else {
+                
+                var cats = [Category]()
+                for cat in j["categories"].arrayObject! {
+                    
+                    cats.append(Category(data: cat))
+                }
+                
+                cb(cats)
+            }
         }
     }
 }
