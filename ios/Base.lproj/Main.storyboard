@@ -30,22 +30,62 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lovecircle_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-kU-A79">
+                                <rect key="frame" x="276" y="322" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="LKm-OB-K1L"/>
+                                    <constraint firstAttribute="width" constant="48" id="PCb-5c-XDp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O59-3h-hpC">
+                                <rect key="frame" x="15" y="538" width="48" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="728-fI-abe"/>
+                                    <constraint firstAttribute="width" constant="48" id="BOz-il-DXs"/>
+                                </constraints>
+                                <state key="normal" image="back.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDu-KF-gwF">
+                                <rect key="frame" x="535" y="538" width="48" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="J7L-eH-Z09"/>
+                                    <constraint firstAttribute="height" constant="47" id="LQk-uU-ymu"/>
+                                </constraints>
+                                <state key="normal" image="next.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tZD-tv-5Xg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="05O-Ev-Fq5"/>
                             <constraint firstAttribute="centerX" secondItem="tZD-tv-5Xg" secondAttribute="centerX" id="1ui-XF-eNp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iDu-KF-gwF" secondAttribute="trailing" constant="1" id="Bfo-Eg-i6F"/>
+                            <constraint firstItem="0Eb-kU-A79" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="252" id="Bk8-RY-c9Y"/>
                             <constraint firstItem="NF0-3v-t0Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="155" id="Blt-DM-n2W"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O59-3h-hpC" secondAttribute="bottom" constant="15" id="PHV-7I-qE4"/>
+                            <constraint firstAttribute="centerX" secondItem="0Eb-kU-A79" secondAttribute="centerX" id="PJK-74-N8o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Eb-kU-A79" secondAttribute="bottom" constant="230" id="UJJ-rI-82T"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iDu-KF-gwF" secondAttribute="bottom" constant="15" id="YiD-jb-xdD"/>
                             <constraint firstItem="tZD-tv-5Xg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="130" id="c3m-s3-Utm"/>
+                            <constraint firstItem="O59-3h-hpC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="eDD-av-Sds"/>
                             <constraint firstItem="NF0-3v-t0Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="290" id="iUW-NJ-zI2"/>
                             <constraint firstAttribute="centerX" secondItem="NF0-3v-t0Q" secondAttribute="centerX" id="mz3-Ob-TzI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iDu-KF-gwF" secondAttribute="bottom" constant="15" id="nT5-yt-Ov9"/>
                             <constraint firstItem="NF0-3v-t0Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="155" id="qDd-Rt-eqr"/>
+                            <constraint firstAttribute="trailing" secondItem="iDu-KF-gwF" secondAttribute="trailing" constant="15" id="tcu-FW-XAP"/>
+                            <constraint firstItem="0Eb-kU-A79" firstAttribute="top" secondItem="NF0-3v-t0Q" secondAttribute="bottom" constant="109.5" id="uDf-vd-GHM"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Blt-DM-n2W"/>
                                 <exclude reference="iUW-NJ-zI2"/>
                                 <exclude reference="05O-Ev-Fq5"/>
+                                <exclude reference="Bk8-RY-c9Y"/>
+                                <exclude reference="UJJ-rI-82T"/>
+                                <exclude reference="tcu-FW-XAP"/>
                             </mask>
                         </variation>
                     </view>
@@ -55,4 +95,9 @@
             <point key="canvasLocation" x="-361" y="16"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back.png" width="96" height="94"/>
+        <image name="lovecircle_1.png" width="96" height="96"/>
+        <image name="next.png" width="96" height="94"/>
+    </resources>
 </document>

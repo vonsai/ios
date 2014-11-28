@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92924D201A291C3800CB4ABE /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D191A291C3800CB4ABE /* back.png */; };
+		92924D211A291C3800CB4ABE /* lovecircle_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D1A1A291C3800CB4ABE /* lovecircle_1.png */; };
+		92924D221A291C3800CB4ABE /* lovecircle_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D1B1A291C3800CB4ABE /* lovecircle_2.png */; };
+		92924D231A291C3800CB4ABE /* lovecircle_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D1C1A291C3800CB4ABE /* lovecircle_3.png */; };
+		92924D241A291C3800CB4ABE /* lovecircle_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D1D1A291C3800CB4ABE /* lovecircle_4.png */; };
+		92924D251A291C3800CB4ABE /* lovecircle_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D1E1A291C3800CB4ABE /* lovecircle_5.png */; };
+		92924D261A291C3800CB4ABE /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D1F1A291C3800CB4ABE /* next.png */; };
 		E13C0D8B1A29010600757D6C /* Alamo-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C0D881A29010600757D6C /* Alamo-SwiftyJSON.swift */; };
 		E13C0D8C1A29010600757D6C /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C0D891A29010600757D6C /* Alamofire.swift */; };
 		E13C0D8D1A29010600757D6C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C0D8A1A29010600757D6C /* SwiftyJSON.swift */; };
@@ -52,6 +59,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		92924D191A291C3800CB4ABE /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		92924D1A1A291C3800CB4ABE /* lovecircle_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovecircle_1.png; sourceTree = "<group>"; };
+		92924D1B1A291C3800CB4ABE /* lovecircle_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovecircle_2.png; sourceTree = "<group>"; };
+		92924D1C1A291C3800CB4ABE /* lovecircle_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovecircle_3.png; sourceTree = "<group>"; };
+		92924D1D1A291C3800CB4ABE /* lovecircle_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovecircle_4.png; sourceTree = "<group>"; };
+		92924D1E1A291C3800CB4ABE /* lovecircle_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovecircle_5.png; sourceTree = "<group>"; };
+		92924D1F1A291C3800CB4ABE /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		E10D280B1A28E3DB00B18150 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		E13C0D881A29010600757D6C /* Alamo-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamo-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		E13C0D891A29010600757D6C /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
@@ -88,6 +102,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92924D181A291C3800CB4ABE /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				92924D191A291C3800CB4ABE /* back.png */,
+				92924D1A1A291C3800CB4ABE /* lovecircle_1.png */,
+				92924D1B1A291C3800CB4ABE /* lovecircle_2.png */,
+				92924D1C1A291C3800CB4ABE /* lovecircle_3.png */,
+				92924D1D1A291C3800CB4ABE /* lovecircle_4.png */,
+				92924D1E1A291C3800CB4ABE /* lovecircle_5.png */,
+				92924D1F1A291C3800CB4ABE /* next.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		E10D280A1A28E3DB00B18150 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +151,7 @@
 				E1D4F9A61A253762005E1CD5 /* Api.swift */,
 				E1D4F9881A253540005E1CD5 /* Main.storyboard */,
 				E1D4F98B1A253540005E1CD5 /* Images.xcassets */,
+				92924D181A291C3800CB4ABE /* assets */,
 				E1D4F98D1A253540005E1CD5 /* LaunchScreen.xib */,
 				E1D4F9821A253540005E1CD5 /* Supporting Files */,
 				E1D4F9A81A2538D6005E1CD5 /* ios-Bridging-Header.h */,
@@ -241,8 +270,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92924D221A291C3800CB4ABE /* lovecircle_2.png in Resources */,
+				92924D201A291C3800CB4ABE /* back.png in Resources */,
 				E1D4F98A1A253540005E1CD5 /* Main.storyboard in Resources */,
 				E1D4F98F1A253540005E1CD5 /* LaunchScreen.xib in Resources */,
+				92924D231A291C3800CB4ABE /* lovecircle_3.png in Resources */,
+				92924D211A291C3800CB4ABE /* lovecircle_1.png in Resources */,
+				92924D261A291C3800CB4ABE /* next.png in Resources */,
+				92924D251A291C3800CB4ABE /* lovecircle_5.png in Resources */,
+				92924D241A291C3800CB4ABE /* lovecircle_4.png in Resources */,
 				E1D4F98C1A253540005E1CD5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
