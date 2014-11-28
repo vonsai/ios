@@ -32,6 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         println(ok)
                     })
                 }
+            } else {
+                api.getArticles({ (art) -> () in
+                    println(art)
+                })
             }
         }
         

@@ -119,8 +119,35 @@ extension Api {
             
             if e != nil {
                 println("ERROR: \(e)")
+                cb(ok: false)
             } else {
                 cb(ok:true)
+            }
+        }
+    }
+}
+
+// MARK: ARTICLES
+
+extension Api {
+    
+    func getArticles(cb: ([Article]) -> ()) {
+        
+        signedRequest(.GET, path:"/articles", parameters: Dictionary<String, String>()){ (j, e) -> () in
+            
+            if e != nil || j["articles"].arrayObject == nil {
+                println("ERROR: \(e)")
+                cb([])
+                
+            } else {
+                
+                var arts = [Article]()
+                for art in j["articles"].arrayObject! {
+                    
+                    arts.append(Article(data: art))
+                }
+                
+                cb(arts)
             }
         }
     }
