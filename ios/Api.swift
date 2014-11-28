@@ -12,8 +12,13 @@ class Api {
     
     let apiKey: String = "Test Api Key"
     let apiSecret: String = "Test Api Secret"
+    let apiBase: String = "http://localhost:5000/api"
     
-    var accessToken: String?
+    var accessToken: String? {
+        didSet {
+            NSUserDefaults.standardUserDefaults().setObject(accessToken, forKey: "accessToken")
+        }
+    }
     var authenticated: Bool {
         get {
             return accessToken != nil
@@ -22,18 +27,48 @@ class Api {
     
     init() {
         accessToken = NSUserDefaults.standardUserDefaults().stringForKey("accessToken")
+        println("my access \(accessToken)")
     }
     
-    func signedRequest(method: Method, path: String, callback: ()->()){
+    func signedRequest(method: Method, path: String, parameters: Dictionary<String, String>, callback: (JSON, NSError?)->()){
+        
+        let timestamp: String = String(Int(NSDate().timeIntervalSince1970))
+        var token: String = ""
+        if let access = accessToken {
+            token = access
+        }
+        
+        Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["X-Api-Timestamp": timestamp, "X-Api-Key": apiKey, "X-Api-Signature": requestSignature(timestamp), "X-Api-Token":token]
+        
+        request(method, "\(self.apiBase)\(path)", parameters: parameters, encoding: .JSON).responseSwiftyJSON { (_, _, json, error) -> Void in
+            
+           callback(json, error)
+        }
+    }
+    
+    
+    func auth(cb: (auth: Bool, hasSetCategories: Bool)->()) {
+        
+        var body = ["uuid": uuid()]
+        signedRequest(.POST, path: "/auth", parameters: body) { (j, e) -> () in
+            if (e != nil && j["token"]["token"] != nil)  {
+                println("ERROR: \(e)")
+            } else {
+                
+                self.accessToken = j["token"]["token"].string!
+                if let hasSet = j["hasSetCategories"].bool {
+                    cb (auth: true, hasSetCategories:hasSet)
+                }
+            }
+            
+        }
         
     }
-    
     func requestSignature(timestamp: String) -> String {
         
         //String(Int(NSDate().timeIntervalSince1970))
         return "\(self.apiSecret) \(timestamp)".sha1()
     }
-    
 }
 
 func uuid() -> String {
