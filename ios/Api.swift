@@ -108,7 +108,7 @@ extension Api {
     
     /*func postCategories(categories: [Category], (ok: Bool)->()){
         
-        var body = []
+        var json = [Dictionary<String, String>]
         for c in categories {
             
             
