@@ -26,11 +26,11 @@
 		<key>4BA1A4586087E5C2200827595B817693EEBF345B</key>
 		<string>../..</string>
 		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
-		<string>../..ios/Alamofire/</string>
+		<string>../..ios/Alamofire</string>
 		<key>79EA0C4F360E98830418AFAE1A03A39D646B0106</key>
-		<string>../..ios/Alamofire-SwiftyJSON/</string>
+		<string>../..ios/Alamofire-SwiftyJSON</string>
 		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
-		<string>../..ios/SwiftyJSON/</string>
+		<string>../..ios/SwiftyJSON</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:vonsai/ios.git</string>
