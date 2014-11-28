@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
 class Api {
     
@@ -27,7 +25,7 @@ class Api {
         accessToken = NSUserDefaults.standardUserDefaults().stringForKey("accessToken")
     }
     
-    func signedRequest(method: Alamofire.Method, path: String, parameters: Dictionary<String, String>, callback: ()->(SwiftyJSON.JSON)){
+    func signedRequest(method: Method, path: String, parameters: Dictionary<String, String>, callback: (JSON, NSError?)->()){
         
         let timestamp: String = String(Int(NSDate().timeIntervalSince1970))
         var token: String = ""
@@ -35,16 +33,20 @@ class Api {
             token = access
         }
         
-        Alamofire.Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["X-Api-Timestamp": timestamp, "X-Api-Key": apiKey, "X-Api-Signature": requestSignature(timestamp), "X-Api-Token":token]
+        Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["X-Api-Timestamp": timestamp, "X-Api-Key": apiKey, "X-Api-Signature": requestSignature(timestamp), "X-Api-Token":token]
         
-        Alamofire.request(method, path, parameters: parameters, encoding: .JSON).responseSwiftyJSON { (req, response, json, error) -> Void in
+        request(method, "\(self.apiBase)\(path)", parameters: parameters, encoding: .JSON).responseSwiftyJSON { (_, _, json, error) -> Void in
             
-            println(json)
+           callback(json, error)
         }
     }
     
     func auth() {
         
+        var body = ["uuid": uuid()]
+        signedRequest(.POST, path: "/auth", parameters: body) { (j, e) -> () in
+             println(j)
+        }
         
     }
     func requestSignature(timestamp: String) -> String {
