@@ -73,7 +73,6 @@ extension Api {
             if e != nil || j["token"]["token"].string == nil {
                 println("ERROR: \(e)")
             } else {
-                
                 self.accessToken = j["token"]["token"].string!
                 if let hasSet = j["hasSetCategories"].bool {
                     cb (auth: true, hasSetCategories:hasSet)
