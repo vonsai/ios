@@ -105,6 +105,17 @@ extension Api {
             }
         }
     }
+    
+    /*func postCategories(categories: [Category], (ok: Bool)->()){
+        
+        var body = []
+        for c in categories {
+            
+            
+        }
+        
+        signedRequest(.POST, path: "/categories", parameters: , callback: <#(JSON, NSError?) -> ()##(JSON, NSError?) -> ()#>)
+    }*/
 }
 
 func uuid() -> String {
