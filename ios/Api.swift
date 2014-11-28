@@ -34,7 +34,6 @@ class Api {
         return "\(self.apiSecret) \(timestamp)".sha1()
     }
     
-    
 }
 
 func uuid() -> String {
