@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             api.auth {
                 (auth, hasSet) in
                 if !hasSet {
-                     self.loadCategories()
+                    self.loadCategories()
                 } else {
                     println("NO CARGO OSTIAS")
                 }
