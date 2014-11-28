@@ -30,7 +30,7 @@ class Api {
         println("my access \(accessToken)")
     }
     
-    func signedRequest(method: Method, path: String, parameters: Dictionary<String, String>, callback: (JSON, NSError?)->()){
+    func signedRequest(method: Method, path: String, parameters: Dictionary<String, AnyObject>, callback: (JSON, NSError?)->()){
         
         let timestamp: String = String(Int(NSDate().timeIntervalSince1970))
         var token: String = ""
@@ -92,6 +92,7 @@ extension Api {
             
             if e != nil || j["categories"].arrayObject == nil {
                 println("ERROR: \(e)")
+                cb([])
                 
             } else {
                 
@@ -106,16 +107,23 @@ extension Api {
         }
     }
     
-    /*func postCategories(categories: [Category], (ok: Bool)->()){
+    func postCategories(categories: [Category], cb: (ok: Bool)->()){
         
-        var json = [Dictionary<String, String>]
+        var json = [Dictionary<String, AnyObject>]()
         for c in categories {
             
-            
+            json.append(["id":c.id, "value":c.value])
         }
         
-        signedRequest(.POST, path: "/categories", parameters: , callback: <#(JSON, NSError?) -> ()##(JSON, NSError?) -> ()#>)
-    }*/
+        signedRequest(.POST, path: "/categories", parameters:["categories":json]) { (j, e) -> () in
+            
+            if e != nil {
+                println("ERROR: \(e)")
+            } else {
+                cb(ok:true)
+            }
+        }
+    }
 }
 
 func uuid() -> String {

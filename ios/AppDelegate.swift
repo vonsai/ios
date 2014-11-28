@@ -27,7 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if !hasSet {
                 
                 api.getCategories { (cats) in
-                    
+                    cats[0].value = 1
+                    api.postCategories(cats, cb: { (ok) -> () in
+                        println(ok)
+                    })
                 }
             }
         }
