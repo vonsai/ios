@@ -14,7 +14,11 @@ class Api {
     let apiSecret: String = "Test Api Secret"
     let apiBase: String = "http://localhost:5000/api"
     
-    var accessToken: String?
+    var accessToken: String? {
+        didSet {
+            NSUserDefaults.standardUserDefaults().setObject(accessToken, forKey: "accessToken")
+        }
+    }
     var authenticated: Bool {
         get {
             return accessToken != nil
@@ -23,6 +27,7 @@ class Api {
     
     init() {
         accessToken = NSUserDefaults.standardUserDefaults().stringForKey("accessToken")
+        println("my access \(accessToken)")
     }
     
     func signedRequest(method: Method, path: String, parameters: Dictionary<String, String>, callback: (JSON, NSError?)->()){
@@ -41,11 +46,21 @@ class Api {
         }
     }
     
-    func auth() {
+    
+    func auth(cb: (auth: Bool, hasSetCategories: Bool)->()) {
         
         var body = ["uuid": uuid()]
         signedRequest(.POST, path: "/auth", parameters: body) { (j, e) -> () in
-             println(j)
+            if (e != nil && j["token"]["token"] != nil)  {
+                println("ERROR: \(e)")
+            } else {
+                
+                self.accessToken = j["token"]["token"].string!
+                if let hasSet = j["hasSetCategories"].bool {
+                    cb (auth: true, hasSetCategories:hasSet)
+                }
+            }
+            
         }
         
     }
@@ -54,8 +69,6 @@ class Api {
         //String(Int(NSDate().timeIntervalSince1970))
         return "\(self.apiSecret) \(timestamp)".sha1()
     }
-    
-    
 }
 
 func uuid() -> String {

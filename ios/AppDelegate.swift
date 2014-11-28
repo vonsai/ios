@@ -18,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        Api().auth()
+        Api().auth({
+            (auth, hasSet) in
+            
+            println("has set \(hasSet)")
+        })
         
         return true
     }
