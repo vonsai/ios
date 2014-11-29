@@ -370,7 +370,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="HQI-kU-eBR" kind="show" id="ARc-bA-lCt"/>
+                                    <segue destination="HQI-kU-eBR" kind="show" id="sRd-ZO-D3m"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -490,7 +490,6 @@
         <image name="next.png" width="96" height="94"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ARc-bA-lCt"/>
-
+        <segue reference="sRd-ZO-D3m"/>
     </inferredMetricsTieBreakers>
 </document>
