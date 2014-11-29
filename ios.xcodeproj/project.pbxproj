@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		928878BF1A29E0F40083DDF0 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928878BE1A29E0F40083DDF0 /* ArticleView.swift */; };
 		92924D201A291C3800CB4ABE /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D191A291C3800CB4ABE /* back@2x.png */; };
-		92924D261A291C3800CB4ABE /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D1F1A291C3800CB4ABE /* next.png */; };
+		92924D261A291C3800CB4ABE /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D1F1A291C3800CB4ABE /* next@2x.png */; };
 		92924D281A292B0000CB4ABE /* category_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D271A292B0000CB4ABE /* category_default@2x.png */; };
 		92924D2E1A2952E400CB4ABE /* category_españa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D291A2952E400CB4ABE /* category_españa@2x.png */; };
 		92924D2F1A2952E400CB4ABE /* category_tecnología@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D2A1A2952E400CB4ABE /* category_tecnología@2x.png */; };
@@ -28,6 +28,9 @@
 		92E728EF1A29A8B400A436CD /* lovecircle_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E728EA1A29A8B400A436CD /* lovecircle_3@2x.png */; };
 		92E728F01A29A8B400A436CD /* lovecircle_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E728EB1A29A8B400A436CD /* lovecircle_4@2x.png */; };
 		92E728F11A29A8B400A436CD /* lovecircle_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E728EC1A29A8B400A436CD /* lovecircle_5@2x.png */; };
+		92E807BC1A2A02F800271E67 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E807BB1A2A02F800271E67 /* share@2x.png */; };
+		92E807BE1A2A031A00271E67 /* back_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E807BD1A2A031A00271E67 /* back_icon@2x.png */; };
+		92E807C01A2A0C0400271E67 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E807BF1A2A0C0400271E67 /* default@2x.png */; };
 		E1059C7C1A29C9610045FA24 /* category_ciencia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1059C781A29C9610045FA24 /* category_ciencia@2x.png */; };
 		E1059C7D1A29C9610045FA24 /* category_cultura@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1059C791A29C9610045FA24 /* category_cultura@2x.png */; };
 		E1059C7E1A29C9610045FA24 /* category_internacional@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1059C7A1A29C9610045FA24 /* category_internacional@2x.png */; };
@@ -85,7 +88,7 @@
 /* Begin PBXFileReference section */
 		928878BE1A29E0F40083DDF0 /* ArticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		92924D191A291C3800CB4ABE /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
-		92924D1F1A291C3800CB4ABE /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		92924D1F1A291C3800CB4ABE /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		92924D271A292B0000CB4ABE /* category_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_default@2x.png"; sourceTree = "<group>"; };
 		92924D291A2952E400CB4ABE /* category_españa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_españa@2x.png"; sourceTree = "<group>"; };
 		92924D2A1A2952E400CB4ABE /* category_tecnología@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_tecnología@2x.png"; sourceTree = "<group>"; };
@@ -104,6 +107,9 @@
 		92E728EA1A29A8B400A436CD /* lovecircle_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lovecircle_3@2x.png"; sourceTree = "<group>"; };
 		92E728EB1A29A8B400A436CD /* lovecircle_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lovecircle_4@2x.png"; sourceTree = "<group>"; };
 		92E728EC1A29A8B400A436CD /* lovecircle_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lovecircle_5@2x.png"; sourceTree = "<group>"; };
+		92E807BB1A2A02F800271E67 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		92E807BD1A2A031A00271E67 /* back_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_icon@2x.png"; sourceTree = "<group>"; };
+		92E807BF1A2A0C0400271E67 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default@2x.png"; path = "assets/default@2x.png"; sourceTree = "<group>"; };
 		E1059C781A29C9610045FA24 /* category_ciencia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_ciencia@2x.png"; sourceTree = "<group>"; };
 		E1059C791A29C9610045FA24 /* category_cultura@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_cultura@2x.png"; sourceTree = "<group>"; };
 		E1059C7A1A29C9610045FA24 /* category_internacional@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_internacional@2x.png"; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 		92924D181A291C3800CB4ABE /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				92E807BD1A2A031A00271E67 /* back_icon@2x.png */,
+				92E807BB1A2A02F800271E67 /* share@2x.png */,
 				92BF5F6A1A29DCB800075EC9 /* heart@2x.png */,
 				E1059C781A29C9610045FA24 /* category_ciencia@2x.png */,
 				E1059C791A29C9610045FA24 /* category_cultura@2x.png */,
@@ -174,7 +182,7 @@
 				92924D2D1A2952E400CB4ABE /* category_motor@2x.png */,
 				92924D271A292B0000CB4ABE /* category_default@2x.png */,
 				92924D191A291C3800CB4ABE /* back@2x.png */,
-				92924D1F1A291C3800CB4ABE /* next.png */,
+				92924D1F1A291C3800CB4ABE /* next@2x.png */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 				E1BBD56A1A29F53800523A5F /* SavedVC.swift */,
 				E1D4F9881A253540005E1CD5 /* Main.storyboard */,
 				E1D4F98B1A253540005E1CD5 /* Images.xcassets */,
+				92E807BF1A2A0C0400271E67 /* default@2x.png */,
 				92924D3D1A295D0200CB4ABE /* Audios */,
 				92924D181A291C3800CB4ABE /* assets */,
 				E1D4F98D1A253540005E1CD5 /* LaunchScreen.xib */,
@@ -321,7 +330,7 @@
 				TargetAttributes = {
 					E1D4F97E1A253540005E1CD5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 72RF4L6QZW;
+						DevelopmentTeam = U296BK865E;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -330,7 +339,7 @@
 					};
 					E1D4F9931A253540005E1CD5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 72RF4L6QZW;
+						DevelopmentTeam = U296BK865E;
 						TestTargetID = E1D4F97E1A253540005E1CD5;
 					};
 				};
@@ -365,13 +374,16 @@
 				92924D301A2952E400CB4ABE /* category_deportes@2x.png in Resources */,
 				92924D2E1A2952E400CB4ABE /* category_españa@2x.png in Resources */,
 				92E728F01A29A8B400A436CD /* lovecircle_4@2x.png in Resources */,
+				92E807BE1A2A031A00271E67 /* back_icon@2x.png in Resources */,
 				92924D281A292B0000CB4ABE /* category_default@2x.png in Resources */,
 				92924D201A291C3800CB4ABE /* back@2x.png in Resources */,
 				92924D381A295CF500CB4ABE /* audio_like_3.wav in Resources */,
+				92E807C01A2A0C0400271E67 /* default@2x.png in Resources */,
 				E1D4F98A1A253540005E1CD5 /* Main.storyboard in Resources */,
 				E1D4F98F1A253540005E1CD5 /* LaunchScreen.xib in Resources */,
+				92E807BC1A2A02F800271E67 /* share@2x.png in Resources */,
 				92924D2F1A2952E400CB4ABE /* category_tecnología@2x.png in Resources */,
-				92924D261A291C3800CB4ABE /* next.png in Resources */,
+				92924D261A291C3800CB4ABE /* next@2x.png in Resources */,
 				92924D3B1A295CF500CB4ABE /* audio_like_2.wav in Resources */,
 				92BF5F6B1A29DCB800075EC9 /* heart@2x.png in Resources */,
 				E1059C7E1A29C9610045FA24 /* category_internacional@2x.png in Resources */,
@@ -537,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Luis J Izquierdo Vicente (597L9RS842)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -554,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Luis J Izquierdo Vicente (597L9RS842)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
