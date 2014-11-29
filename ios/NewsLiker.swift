@@ -88,7 +88,7 @@ class NewsLiker: UIViewController {
         api.setArticle(self.articles[self.articleCount], save: liked)
         { (ok) -> () in
             if ok {
-                println("Article set")
+                
             }
         }
     }

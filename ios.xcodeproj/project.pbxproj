@@ -40,6 +40,7 @@
 		E13C0D931A2942C300757D6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13C0D921A2942C300757D6C /* CoreLocation.framework */; };
 		E13C0D951A2958F800757D6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13C0D941A2958F800757D6C /* QuartzCore.framework */; };
 		E13C0D971A29AE0800757D6C /* crosscircle_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E13C0D961A29AE0800757D6C /* crosscircle_4@2x.png */; };
+		E1BBD56B1A29F53800523A5F /* SavedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BBD56A1A29F53800523A5F /* SavedVC.swift */; };
 		E1D4F9851A253540005E1CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4F9841A253540005E1CD5 /* AppDelegate.swift */; };
 		E1D4F9871A253540005E1CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4F9861A253540005E1CD5 /* ViewController.swift */; };
 		E1D4F98A1A253540005E1CD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D4F9881A253540005E1CD5 /* Main.storyboard */; };
@@ -116,6 +117,7 @@
 		E13C0D921A2942C300757D6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E13C0D941A2958F800757D6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E13C0D961A29AE0800757D6C /* crosscircle_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crosscircle_4@2x.png"; sourceTree = "<group>"; };
+		E1BBD56A1A29F53800523A5F /* SavedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedVC.swift; sourceTree = "<group>"; };
 		E1D4F97F1A253540005E1CD5 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D4F9831A253540005E1CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D4F9841A253540005E1CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				E13C0D901A2942A400757D6C /* Beacons.swift */,
 				E13C0D8E1A2909C300757D6C /* Models.swift */,
 				928878BE1A29E0F40083DDF0 /* ArticleView.swift */,
+				E1BBD56A1A29F53800523A5F /* SavedVC.swift */,
 				E1D4F9881A253540005E1CD5 /* Main.storyboard */,
 				E1D4F98B1A253540005E1CD5 /* Images.xcassets */,
 				92924D3D1A295D0200CB4ABE /* Audios */,
@@ -318,7 +321,7 @@
 				TargetAttributes = {
 					E1D4F97E1A253540005E1CD5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = U296BK865E;
+						DevelopmentTeam = 72RF4L6QZW;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -327,7 +330,7 @@
 					};
 					E1D4F9931A253540005E1CD5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = U296BK865E;
+						DevelopmentTeam = 72RF4L6QZW;
 						TestTargetID = E1D4F97E1A253540005E1CD5;
 					};
 				};
@@ -408,6 +411,7 @@
 				E1D4F9A71A253762005E1CD5 /* Api.swift in Sources */,
 				928878BF1A29E0F40083DDF0 /* ArticleView.swift in Sources */,
 				E1D4F9851A253540005E1CD5 /* AppDelegate.swift in Sources */,
+				E1BBD56B1A29F53800523A5F /* SavedVC.swift in Sources */,
 				E13C0D8F1A2909C300757D6C /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
