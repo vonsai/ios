@@ -190,15 +190,23 @@
                                 <rect key="frame" x="20" y="84" width="560" height="144"/>
                                 <color key="backgroundColor" red="0.16862745098039217" green="0.17647058823529413" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lovecircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="mVY-b5-LC9">
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lovecircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="mVY-b5-LC9">
                                 <rect key="frame" x="448" y="416" width="100" height="100"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Tt6-S9-hUI" appends="YES" id="xuq-ug-NO3"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-hW-r40">
                                 <rect key="frame" x="20" y="228" width="560" height="168"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crosscircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZhT-9t-PHq">
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crosscircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZhT-9t-PHq">
                                 <rect key="frame" x="52" y="417" width="100" height="99"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EED-BF-hWu" appends="YES" id="y2z-7b-Q94"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Felisuco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtC-HV-mpV">
                                 <rect key="frame" x="40" y="194" width="60" height="13.5"/>
@@ -306,8 +314,25 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="eVs-18-Upt"/>
+                    <connections>
+                        <outlet property="articleCategory" destination="oFu-nc-Dbm" id="bRL-Jp-55l"/>
+                        <outlet property="articleContent" destination="nwa-8H-KNB" id="n1O-tA-TmQ"/>
+                        <outlet property="articleShares" destination="Pvd-qi-G0w" id="wWd-In-L5x"/>
+                        <outlet property="articleTime" destination="FtC-HV-mpV" id="gfO-yb-OPt"/>
+                        <outlet property="articleTitle" destination="rS0-uF-9o6" id="znb-MY-ECj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GqT-p3-Ays" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EED-BF-hWu">
+                    <connections>
+                        <action selector="clickedCrossButton" destination="7yg-oU-Fdc" id="bQX-gV-vHi"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Tt6-S9-hUI">
+                    <connections>
+                        <action selector="clickedLikeButton" destination="7yg-oU-Fdc" id="HsW-ks-ebi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2212" y="-320.5"/>
         </scene>
