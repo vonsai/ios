@@ -70,7 +70,6 @@ class ViewController: UIViewController {
         self.shouldShowBackItem()
         if let cats = self.categories {
             var category = cats[self.categoryCount]
-            
             var trans = CATransition()
             trans.duration = 0.4
             trans.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
