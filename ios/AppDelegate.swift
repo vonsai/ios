@@ -20,29 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         
-        /*var api = Api()
+        var api = Api()
         
         api.auth {
             (auth, hasSet) in
-                
-            println("has set \(hasSet)")
-            if !hasSet {
-                
-                api.getCategories { (cats) in
-                    cats[0].value = 1
-                    api.postCategories(cats, cb: { (ok) -> () in
-                        println(ok)
-                    })
-                }
-            } else {
-                api.getArticles({ (art) -> () in
-                    println(art[0].stats!.readingTime)
-                })
+            
+            api.getArticles(true) { (art) -> () in
+                println(art.count)
             }
-        }*/
+            
+        }
         
         return true
     }
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

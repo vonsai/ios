@@ -18,13 +18,14 @@ class ViewController: UIViewController {
     @IBOutlet var backButton: UIButton?
     
     let api = Api()
-    
+    let beacon = Beacons()
     var categories: [Category]?
     var categoryCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Beacons()
+        
+        beacon.start()
         self.loadCategories()
         
         // Do any additional setup after loading the view, typically from a nib.

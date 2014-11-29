@@ -130,9 +130,14 @@ extension Api {
 
 extension Api {
     
-    func getArticles(cb: ([Article]) -> ()) {
+    func getArticles(saved: Bool, cb: ([Article]) -> ()) {
         
-        signedRequest(.GET, path:"/articles", parameters: Dictionary<String, String>()){ (j, e) -> () in
+        var path = "/articles"
+        if saved {
+            path += "/saved"
+        }
+        
+        signedRequest(.GET, path:path, parameters: Dictionary<String, String>()){ (j, e) -> () in
             
             if e != nil || j["articles"].arrayObject == nil {
                 println("ERROR: \(e)")
@@ -150,6 +155,19 @@ extension Api {
             }
         }
     }
+    
+    func setArticle(article: Article, save: Bool, cb: (ok: Bool) -> ()){
+        
+        signedRequest(.POST, path: "/article/\(article.id)", parameters: ["stats":["saved": save]]) { (j, e) -> () in
+            if e != nil {
+                println("ERROR: \(e)")
+                cb(ok: false)
+            } else {
+                cb(ok:true)
+            }
+        }
+    }
+    
 }
 
 func uuid() -> String {
