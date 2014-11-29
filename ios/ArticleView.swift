@@ -22,7 +22,6 @@ class ArticleView: UIViewController {
         self.webView?.loadHTMLString(html, baseURL: nil)
         self.title = article?.category?.name
         webView?.stringByEvaluatingJavaScriptFromString("document.body.style.fontFamily = '\(webViewFont)'")
-
     }
     
     override func didReceiveMemoryWarning() {

@@ -391,7 +391,7 @@
         <!--Article View-->
         <scene sceneID="WUi-1V-vQ5">
             <objects>
-                <viewController id="HQI-kU-eBR" customClass="ArticleView" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="article" id="HQI-kU-eBR" customClass="ArticleView" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AZa-EF-LaL"/>
                         <viewControllerLayoutGuide type="bottom" id="YHU-fi-KUC"/>
