@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class NewsLiker: UIViewController {
     let beacon = Beacons()
@@ -29,10 +30,10 @@ class NewsLiker: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 242, green: 200, blue: 200, alpha: 1)
         self.loadArticles()
         //self.beacons()
     }
+
     func beacons() {
         beacon.start {
             (bId) in
@@ -42,19 +43,12 @@ class NewsLiker: UIViewController {
             }
         }
     }
+
     func loadArticles(){
-        if self.articleCount < self.articles.count {
-            return launchView()
-        }
-        
         api.getArticles(false, beacon: nil) {
             arts in
-            self.articleCount = 0
             self.articles = arts
-            self.launchView()
-            for a in arts {
-               
-            }
+            self.loadNextViewOrReloadSelf()
         }
     }
     
@@ -62,18 +56,57 @@ class NewsLiker: UIViewController {
         var article = self.articles[self.articleCount]
         self.articleCategory?.text = article.category?.name
         self.articleShares?.text = article.shares
-        self.articleContent?.text = article.description
+        self.articleContent?.text = article.subtitle
+        self.articleContent?.textContainerInset = UIEdgeInsetsZero
+        self.articleContent?.textContainer.lineFragmentPadding = 0
         self.articleTitle?.text = article.title
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm dd-MM-yyyy"
+        self.articleTime?.text = dateFormatter.stringFromDate(article.date!)
     }
     
     @IBAction func clickedLikeButton() {
         self.articleCount+=1
-        self.loadArticles()
+        self.playLikeSoundWithNumber(4)
+        self.loadNextViewOrReloadSelf()
+        self.likedArticle(true)
     }
     
     @IBAction func clickedCrossButton() {
         self.articleCount+=1
-        self.loadArticles()
+        self.loadNextViewOrReloadSelf()
+        self.likedArticle(false)
+    }
+    
+    func likedArticle (liked: Bool) {
+        if self.articleCount >= self.articles.count {
+            return
+        }
+        api.setArticle(self.articles[self.articleCount], save: liked)
+        { (ok) -> () in
+            if ok {
+                println("Article set")
+            }
+        }
+    }
+    
+    func loadNextViewOrReloadSelf () {
+        println("\(self.articleCount) of \(self.articles.count)")
+        if self.articleCount >= self.articles.count {
+            self.tabBarController?.selectedIndex = 1
+        } else {
+            self.launchView()
+        }
+    }
+    
+    func playLikeSoundWithNumber (number: Int){
+        if number == 1 {
+            return
+        }
+        var soundURL = NSBundle.mainBundle().URLForResource("audio_like_\(number)", withExtension: "wav")
+        var soundId: SystemSoundID = 0
+        AudioServicesCreateSystemSoundID(soundURL, &soundId)
+        AudioServicesPlaySystemSound(soundId)
     }
     
     override func didReceiveMemoryWarning() {

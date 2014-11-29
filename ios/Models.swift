@@ -45,6 +45,8 @@ class Article {
     let shares: String?
     let stats: Stats?
     let category: Category?
+    let date: NSDate?
+    let ts: NSTimeInterval?
     
     init(data: AnyObject) {
         
@@ -56,12 +58,17 @@ class Article {
         self.imageURL = data["imageURL"] as String?
         self.shares = data["shares"] as String?
         
+        self.ts = data["timestamp"] as NSTimeInterval?
+        
         if let stats: AnyObject? = data["stats"] {
             self.stats = Stats(data: stats!)
         }
         if let cat: AnyObject? = data["category"] {
             self.category = Category(data: cat!)
         }
+        
+        self.date = NSDate(timeIntervalSince1970: self.ts!)
+        
     }
 }
 

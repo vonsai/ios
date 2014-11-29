@@ -19,6 +19,7 @@
 		92924D391A295CF500CB4ABE /* audio_like_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92924D341A295CF500CB4ABE /* audio_like_4.wav */; };
 		92924D3B1A295CF500CB4ABE /* audio_like_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92924D361A295CF500CB4ABE /* audio_like_2.wav */; };
 		92924D3C1A295CF500CB4ABE /* audio_like_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92924D371A295CF500CB4ABE /* audio_like_5.wav */; };
+		92BF5F6B1A29DCB800075EC9 /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BF5F6A1A29DCB800075EC9 /* heart@2x.png */; };
 		92C0C72C1A295EA4000B349E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C0C72B1A295EA4000B349E /* AVFoundation.framework */; };
 		92C0C72E1A296432000B349E /* NewsLiker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0C72D1A296432000B349E /* NewsLiker.swift */; };
 		92E728ED1A29A8B400A436CD /* lovecircle_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E728E81A29A8B400A436CD /* lovecircle_1@2x.png */; };
@@ -88,6 +89,7 @@
 		92924D341A295CF500CB4ABE /* audio_like_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio_like_4.wav; sourceTree = "<group>"; };
 		92924D361A295CF500CB4ABE /* audio_like_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio_like_2.wav; sourceTree = "<group>"; };
 		92924D371A295CF500CB4ABE /* audio_like_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio_like_5.wav; sourceTree = "<group>"; };
+		92BF5F6A1A29DCB800075EC9 /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@2x.png"; sourceTree = "<group>"; };
 		92C0C72B1A295EA4000B349E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		92C0C72D1A296432000B349E /* NewsLiker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsLiker.swift; sourceTree = "<group>"; };
 		92E728E81A29A8B400A436CD /* lovecircle_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lovecircle_1@2x.png"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		92924D181A291C3800CB4ABE /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				92BF5F6A1A29DCB800075EC9 /* heart@2x.png */,
 				E13C0D961A29AE0800757D6C /* crosscircle_4@2x.png */,
 				92E728E81A29A8B400A436CD /* lovecircle_1@2x.png */,
 				92E728E91A29A8B400A436CD /* lovecircle_2@2x.png */,
@@ -351,6 +354,7 @@
 				92924D2F1A2952E400CB4ABE /* category_tecnología@2x.png in Resources */,
 				92924D261A291C3800CB4ABE /* next.png in Resources */,
 				92924D3B1A295CF500CB4ABE /* audio_like_2.wav in Resources */,
+				92BF5F6B1A29DCB800075EC9 /* heart@2x.png in Resources */,
 				92924D391A295CF500CB4ABE /* audio_like_4.wav in Resources */,
 				92E728EE1A29A8B400A436CD /* lovecircle_2@2x.png in Resources */,
 				E13C0D971A29AE0800757D6C /* crosscircle_4@2x.png in Resources */,
