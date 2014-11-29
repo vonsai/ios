@@ -11,6 +11,7 @@ import UIKit
 class NewsLiker: UIViewController {
 
     let api = Api()
+    var articles = [Article]()
     
     var categories: [Category]?
     var categoryCount: Int = 0
@@ -22,6 +23,19 @@ class NewsLiker: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 242, green: 242, blue: 242, alpha: 1)
+        self.loadArticles()
+    }
+    
+    func loadArticles(){
+        
+        api.getArticles(false, beacon: nil) {
+            arts in
+            
+            self.articles = arts
+            for a in arts {
+                println(a.category!.name)
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {

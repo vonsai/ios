@@ -38,10 +38,11 @@ class Category {
 class Article {
     let id: String
     let title: String
-    let subtitle: String
+    let subtitle: String?
     let description: String?
     let text: String
     let imageURL: String?
+    let shares: String?
     let stats: Stats?
     let category: Category?
     
@@ -49,10 +50,11 @@ class Article {
         
         self.id = data["id"] as String
         self.title = data["title"] as String
-        self.subtitle = data["subtitle"] as String
+        self.subtitle = data["subtitle"] as String?
         self.description = data["description"] as String?
         self.text = data["text"] as String
         self.imageURL = data["imageURL"] as String?
+        self.shares = data["shares"] as String?
         
         if let stats: AnyObject? = data["stats"] {
             self.stats = Stats(data: stats!)
