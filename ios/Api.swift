@@ -111,7 +111,7 @@ extension Api {
         var json = [Dictionary<String, AnyObject>]()
         for c in categories {
             
-            json.append(["id":c.id, "value":c.value])
+            json.append(["id":c.id!, "value":c.value])
         }
         
         signedRequest(.POST, path: "/categories", parameters:["categories":json]) { (j, e) -> () in
