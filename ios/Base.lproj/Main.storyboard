@@ -181,43 +181,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_deportes.png" translatesAutoresizingMaskIntoConstraints="NO" id="bxG-Bw-BdQ">
-                                <rect key="frame" x="40" y="104" width="560" height="287"/>
+                                <rect key="frame" x="40" y="104" width="560" height="143.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="287" id="KjJ-cD-zad"/>
+                                    <constraint firstAttribute="height" constant="143.5" id="KjJ-cD-zad"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="143.5" id="bNb-pd-jUW"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lovecircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="mVY-b5-LC9">
-                                <rect key="frame" x="436" y="952" width="100" height="100"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lovecircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="aY2-14-Mfl">
-                                <rect key="frame" x="104" y="952" width="100" height="100"/>
+                                <rect key="frame" x="488" y="952" width="100" height="100"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-hW-r40">
-                                <rect key="frame" x="40" y="391" width="560" height="521"/>
+                                <rect key="frame" x="40" y="247" width="560" height="665"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.035351606610000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crosscircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZhT-9t-PHq">
+                                <rect key="frame" x="52" y="952" width="100" height="100"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ZEa-hW-r40" secondAttribute="trailing" constant="40" id="1WV-Tq-pnn"/>
                             <constraint firstItem="bxG-Bw-BdQ" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="60" id="84W-fO-vbO"/>
+                            <constraint firstItem="ZEa-hW-r40" firstAttribute="top" secondItem="zct-n5-cJc" secondAttribute="bottom" constant="183" id="9yC-Eh-T0F"/>
                             <constraint firstItem="ZEa-hW-r40" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="40" id="ADS-Eu-aDV"/>
+                            <constraint firstItem="7G5-oo-SL6" firstAttribute="top" secondItem="ZhT-9t-PHq" secondAttribute="bottom" constant="35" id="G7l-ek-Ck2"/>
                             <constraint firstItem="bxG-Bw-BdQ" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="40" id="GD8-y5-ctY"/>
                             <constraint firstItem="bxG-Bw-BdQ" firstAttribute="top" secondItem="zct-n5-cJc" secondAttribute="bottom" constant="36" id="M0q-Nd-3pN"/>
                             <constraint firstItem="7G5-oo-SL6" firstAttribute="top" secondItem="mVY-b5-LC9" secondAttribute="bottom" constant="35" id="NxN-QW-ltL"/>
-                            <constraint firstItem="ZEa-hW-r40" firstAttribute="top" secondItem="bxG-Bw-BdQ" secondAttribute="bottom" id="QDD-QT-qg3"/>
+                            <constraint firstItem="ZEa-hW-r40" firstAttribute="top" secondItem="bxG-Bw-BdQ" secondAttribute="bottom" constant="-0.5" id="QDD-QT-qg3"/>
+                            <constraint firstItem="ZhT-9t-PHq" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="52" id="SAD-q6-ULM"/>
                             <constraint firstAttribute="trailing" secondItem="bxG-Bw-BdQ" secondAttribute="trailing" constant="40" id="Wkn-wy-wbP"/>
+                            <constraint firstItem="ZEa-hW-r40" firstAttribute="bottom" secondItem="mVY-b5-LC9" secondAttribute="top" constant="-40" id="Y9T-ni-Nd9"/>
                             <constraint firstItem="bxG-Bw-BdQ" firstAttribute="top" secondItem="jMu-oC-rqx" secondAttribute="topMargin" constant="80" id="YKK-6L-iYt"/>
-                            <constraint firstItem="7G5-oo-SL6" firstAttribute="top" secondItem="aY2-14-Mfl" secondAttribute="bottom" constant="35" id="Ya9-2P-DGG"/>
                             <constraint firstItem="7G5-oo-SL6" firstAttribute="top" secondItem="mVY-b5-LC9" secondAttribute="bottom" constant="134" id="bCE-LS-Qnh"/>
-                            <constraint firstItem="aY2-14-Mfl" firstAttribute="top" secondItem="ZEa-hW-r40" secondAttribute="bottom" constant="40" id="ch0-NY-d28"/>
                             <constraint firstItem="ZEa-hW-r40" firstAttribute="top" secondItem="zct-n5-cJc" secondAttribute="bottom" id="dLL-s3-BmC"/>
                             <constraint firstItem="7G5-oo-SL6" firstAttribute="top" secondItem="ZEa-hW-r40" secondAttribute="bottom" constant="322" id="eZq-DF-qAt"/>
-                            <constraint firstItem="aY2-14-Mfl" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="104" id="hPt-P2-tVI"/>
                             <constraint firstItem="bxG-Bw-BdQ" firstAttribute="top" secondItem="zct-n5-cJc" secondAttribute="bottom" constant="40" id="jOp-dE-dfP"/>
                             <constraint firstAttribute="trailing" secondItem="bxG-Bw-BdQ" secondAttribute="trailing" constant="60" id="ngN-du-zhV"/>
                             <constraint firstItem="bxG-Bw-BdQ" firstAttribute="top" secondItem="jMu-oC-rqx" secondAttribute="topMargin" constant="60" id="nh6-9u-RSY"/>
-                            <constraint firstAttribute="trailing" secondItem="mVY-b5-LC9" secondAttribute="trailing" constant="104" id="pKh-Un-9wT"/>
+                            <constraint firstAttribute="trailing" secondItem="mVY-b5-LC9" secondAttribute="trailing" constant="52" id="pKh-Un-9wT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -283,6 +285,7 @@
         <image name="back.png" width="48" height="47"/>
         <image name="category_default.png" width="320" height="568"/>
         <image name="category_deportes.png" width="320" height="568"/>
+        <image name="crosscircle_4.png" width="100" height="100"/>
         <image name="lovecircle_1.png" width="48" height="48"/>
         <image name="lovecircle_4.png" width="100" height="100"/>
         <image name="next.png" width="96" height="94"/>
