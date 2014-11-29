@@ -20,6 +20,17 @@ class ArticleView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         var html = article?.text
+        if self.article != nil {
+            if self.article?.imageURL != nil {
+                dispatch_async(dispatch_get_main_queue(), {
+                    var urlString = self.article?.imageURL!
+                    var url = NSURL(string: urlString!)
+                    var data = NSData(contentsOfURL: url!)
+                    self.imageView?.image = UIImage(data: data!)
+                })
+            }
+        }
+
         self.webView?.loadHTMLString(html, baseURL: nil)
         self.navigationController?.navigationBarHidden = true
         webView?.stringByEvaluatingJavaScriptFromString("document.body.style.fontFamily = '\(webViewFont)'")

@@ -101,10 +101,12 @@ class NewsLiker: UIViewController {
     func loadNextViewOrReloadSelf () {
         println("\(self.articleCount) of \(self.articles.count)")
         if self.articleCount >= self.articles.count {
+            self.articleCount = 0
             self.tabBarController?.selectedIndex = 1
-        } else {
-            self.launchView()
         }
+        
+        self.launchView()
+
     }
     
     func playLikeSoundWithNumber (number: Int){
