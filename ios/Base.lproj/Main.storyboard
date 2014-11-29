@@ -25,15 +25,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motoreh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NF0-3v-t0Q">
-                                <rect key="frame" x="236" y="175" width="128" height="40"/>
+                                <rect key="frame" x="236" y="175" width="127.5" height="40"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
-                                <color key="textColor" red="0.30813951192660949" green="0.88324680681826295" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORIA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZD-tv-5Xg">
-                                <rect key="frame" x="250" y="150" width="101" height="22"/>
+                                <rect key="frame" x="250" y="150" width="100.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O59-3h-hpC">
@@ -73,13 +73,23 @@
                                     <outletCollection property="gestureRecognizers" destination="mEI-Nc-sPQ" appends="YES" id="GBF-GB-rAW"/>
                                 </connections>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V0q-Vv-VXS">
+                                <rect key="frame" x="236" y="217" width="127.5" height="6"/>
+                                <color key="backgroundColor" red="0.37447980339999998" green="1" blue="0.38028488040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="OPZ-kx-BQ4"/>
+                                    <constraint firstAttribute="width" constant="127.5" id="pnJ-8W-0xY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.37447980335171704" green="1" blue="0.38028488043263931" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tZD-tv-5Xg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="05O-Ev-Fq5"/>
                             <constraint firstItem="wFf-jS-Ugl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="0lu-Gb-6DR"/>
                             <constraint firstAttribute="centerX" secondItem="tZD-tv-5Xg" secondAttribute="centerX" id="1ui-XF-eNp"/>
+                            <constraint firstAttribute="centerX" secondItem="V0q-Vv-VXS" secondAttribute="centerX" id="3TQ-pu-B4o"/>
                             <constraint firstAttribute="trailing" secondItem="wFf-jS-Ugl" secondAttribute="trailing" id="3Wa-aO-qtf"/>
+                            <constraint firstAttribute="centerX" secondItem="V0q-Vv-VXS" secondAttribute="centerX" id="3yB-HJ-qxk"/>
                             <constraint firstItem="zxf-pK-cte" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BFx-8b-tLI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iDu-KF-gwF" secondAttribute="trailing" constant="1" id="Bfo-Eg-i6F"/>
                             <constraint firstItem="0Eb-kU-A79" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="252" id="Bk8-RY-c9Y"/>
@@ -95,6 +105,7 @@
                             <constraint firstItem="wFf-jS-Ugl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="caS-ue-gLi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wFf-jS-Ugl" secondAttribute="trailing" constant="-16" id="cwB-zD-KUB"/>
                             <constraint firstItem="O59-3h-hpC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="eDD-av-Sds"/>
+                            <constraint firstItem="V0q-Vv-VXS" firstAttribute="top" secondItem="NF0-3v-t0Q" secondAttribute="bottom" constant="2" id="hH6-kU-caK"/>
                             <constraint firstItem="NF0-3v-t0Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="290" id="iUW-NJ-zI2"/>
                             <constraint firstAttribute="bottomMargin" secondItem="wFf-jS-Ugl" secondAttribute="bottom" id="lsV-36-Nvz"/>
                             <constraint firstAttribute="centerX" secondItem="NF0-3v-t0Q" secondAttribute="centerX" id="mz3-Ob-TzI"/>
@@ -120,6 +131,7 @@
                     <connections>
                         <outlet property="backButton" destination="O59-3h-hpC" id="hZp-Ai-3kj"/>
                         <outlet property="categoryBackgroundImage" destination="wFf-jS-Ugl" id="1VS-P3-KhH"/>
+                        <outlet property="categoryColorDecorator" destination="V0q-Vv-VXS" id="y4X-BZ-XWL"/>
                         <outlet property="categoryLikeImageView" destination="0Eb-kU-A79" id="HaN-am-b0b"/>
                         <outlet property="categoryNameLabel" destination="NF0-3v-t0Q" id="pxV-LH-CjO"/>
                     </connections>
