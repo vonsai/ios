@@ -19,20 +19,13 @@ class ViewController: UIViewController {
     @IBOutlet var backButton: UIButton?
     
     let api = Api()
-    let beacon = Beacons()
+    
     var categories: [Category]?
     var categoryCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        beacon.start {
-            (bId) in
-            self.api.getArticles(false, beacon: bId) {
-                (arts) -> () in
-                println(arts[0].title)
-            }
-        }
+    
         self.loadCategories()
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -132,7 +125,6 @@ class ViewController: UIViewController {
                 
                 if ok {
                     NSUserDefaults.standardUserDefaults().setBool(true, forKey: "setCategories")
-                    println("everything is good bro")
                     self.openTabBar()
                 }
                 
