@@ -369,6 +369,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="HQI-kU-eBR" kind="show" id="sRd-ZO-D3m"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -377,19 +380,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="CAs-zg-3gL"/>
-                    <connections>
-                        <segue destination="HQI-kU-eBR" kind="show" id="Pqk-Kg-kWR"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yw-bv-5Kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2211" y="472"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="IJA-4d-wgm">
             <objects>
                 <navigationController id="g8j-WF-4ix" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mpL-yS-0e0"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="mpL-yS-0e0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7GA-Gv-dV8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -420,7 +420,7 @@
                                     <constraint firstAttribute="height" constant="144" id="Zj7-MZ-AKp"/>
                                 </constraints>
                             </imageView>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrD-0X-89U">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MrD-0X-89U">
                                 <rect key="frame" x="0.0" y="145" width="600" height="459"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
@@ -490,6 +490,6 @@
         <image name="next.png" width="96" height="94"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SQN-qV-MI0"/>
+        <segue reference="sRd-ZO-D3m"/>
     </inferredMetricsTieBreakers>
 </document>

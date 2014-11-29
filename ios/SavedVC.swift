@@ -19,7 +19,7 @@ class SavedVC: UITableViewController {
     }
     
     override func viewDidLoad() {
-        self.title = "Saved articles"
+        self.title = "Archive"
         super.viewDidLoad()
         self.loadArticles()
         //self.beacons()
@@ -28,6 +28,7 @@ class SavedVC: UITableViewController {
     func loadArticles(){
         api.getArticles(true, beacon: nil) {
             arts in
+            println("got em\(arts.count)")
             self.articles = arts
             self.tableView.reloadData()
         }
@@ -51,11 +52,13 @@ class SavedVC: UITableViewController {
         var article = self.articles[indexPath.row]
         cell!.textLabel.text = article.title
         cell!.detailTextLabel?.text = article.category?.name
+        cell!.tag = indexPath.row
         
         return cell!
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        println("segue")
+        var vc = segue.destinationViewController as ArticleView
+        vc.article = self.articles[sender!.tag]
     }
 }
