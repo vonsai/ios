@@ -130,6 +130,9 @@ extension Api {
 
 extension Api {
     
+    // Tinder view articles: saved = false, beacon = nil
+    // Saved articles: saved = true, beacon = nil
+    // Beacon articles: saved = false, beacon = beaconId
     func getArticles(saved: Bool, beacon: String?, cb: ([Article]) -> ()) {
         
         var path = "/articles"
@@ -162,6 +165,7 @@ extension Api {
         }
     }
     
+    // LOVE: save = true, CROSS: save = false
     func setArticle(article: Article, save: Bool, cb: (ok: Bool) -> ()){
         
         signedRequest(.POST, path: "/article/\(article.id)", parameters: ["stats":["saved": save]]) { (j, e) -> () in
