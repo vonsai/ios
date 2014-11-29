@@ -177,38 +177,50 @@
                         <viewControllerLayoutGuide type="bottom" id="7G5-oo-SL6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jMu-oC-rqx">
-                        <rect key="frame" x="0.0" y="0.0" width="640" height="1136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_deportes.png" translatesAutoresizingMaskIntoConstraints="NO" id="bxG-Bw-BdQ">
-                                <rect key="frame" x="20" y="84" width="600" height="143.5"/>
+                                <rect key="frame" x="20" y="84" width="560" height="143.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="143.5" id="KjJ-cD-zad"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EJx-NC-R7b">
-                                <rect key="frame" x="20" y="84" width="600" height="143.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EJx-NC-R7b">
+                                <rect key="frame" x="20" y="84" width="560" height="143.5"/>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.17647058823529413" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lovecircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="mVY-b5-LC9">
-                                <rect key="frame" x="488" y="952" width="100" height="100"/>
+                                <rect key="frame" x="448" y="416" width="100" height="100"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-hW-r40">
-                                <rect key="frame" x="20" y="227" width="600" height="704.5"/>
+                                <rect key="frame" x="20" y="227" width="560" height="168.5"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.035351606610000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crosscircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZhT-9t-PHq">
-                                <rect key="frame" x="52" y="952" width="100" height="100"/>
+                                <rect key="frame" x="52" y="416" width="100" height="100"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Felisuco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtC-HV-mpV">
-                                <rect key="frame" x="40" y="181" width="112" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="40" y="194" width="60" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS0-uF-9o6">
-                                <rect key="frame" x="40" y="130" width="219" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOLA SOY NOTISIA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS0-uF-9o6">
+                                <rect key="frame" x="40" y="156" width="240" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7p-a1-79w">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOTOREH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFu-nc-Dbm">
+                                <rect key="frame" x="40" y="247" width="57" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -218,6 +230,7 @@
                             <constraint firstItem="EJx-NC-R7b" firstAttribute="trailing" secondItem="bxG-Bw-BdQ" secondAttribute="trailing" id="0Kn-Q9-OwC"/>
                             <constraint firstAttribute="trailing" secondItem="ZEa-hW-r40" secondAttribute="trailing" constant="20" id="1WV-Tq-pnn"/>
                             <constraint firstItem="EJx-NC-R7b" firstAttribute="leading" secondItem="bxG-Bw-BdQ" secondAttribute="leading" id="6dU-Kg-GrM"/>
+                            <constraint firstItem="oFu-nc-Dbm" firstAttribute="leading" secondItem="ZEa-hW-r40" secondAttribute="leading" constant="20" id="7D9-Kn-fLX"/>
                             <constraint firstItem="bxG-Bw-BdQ" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="60" id="84W-fO-vbO"/>
                             <constraint firstItem="ZEa-hW-r40" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="20" id="ADS-Eu-aDV"/>
                             <constraint firstItem="EJx-NC-R7b" firstAttribute="top" secondItem="zct-n5-cJc" secondAttribute="bottom" constant="20" id="Ebz-lX-z29"/>
@@ -239,6 +252,7 @@
                             <constraint firstAttribute="trailing" secondItem="bxG-Bw-BdQ" secondAttribute="trailing" constant="60" id="ngN-du-zhV"/>
                             <constraint firstItem="bxG-Bw-BdQ" firstAttribute="top" secondItem="jMu-oC-rqx" secondAttribute="topMargin" constant="60" id="nh6-9u-RSY"/>
                             <constraint firstAttribute="trailing" secondItem="mVY-b5-LC9" secondAttribute="trailing" constant="52" id="pKh-Un-9wT"/>
+                            <constraint firstItem="oFu-nc-Dbm" firstAttribute="top" secondItem="EJx-NC-R7b" secondAttribute="bottom" constant="20" id="qGe-aZ-jiY"/>
                             <constraint firstItem="EJx-NC-R7b" firstAttribute="bottom" secondItem="FtC-HV-mpV" secondAttribute="bottom" constant="20" id="uB2-ox-a1u"/>
                         </constraints>
                         <variation key="default">
@@ -255,8 +269,6 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="eVs-18-Upt"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="640" height="1136"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GqT-p3-Ays" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
