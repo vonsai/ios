@@ -9,7 +9,7 @@
 import UIKit
 
 class Category {
-    let id: String
+    let id: String?
     let name: String
     let color: UIColor?
     let imageURL: String?
@@ -18,8 +18,20 @@ class Category {
     
     init(data: AnyObject) {
         self.name = data["name"] as String
-        self.value = data["value"] as Float
-        self.id = data["id"] as String
+        self.value = 0
+        if let v = (data["value"] as Float?) {
+            self.value = v
+        }
+        self.id = data["id"] as String?
+        if let c = (data["color"] as String?){
+            var comps = c.componentsSeparatedByString(".")
+            
+            let r = CGFloat((comps[0] as NSString).floatValue)
+            let g = CGFloat((comps[1] as NSString).floatValue)
+            let b = CGFloat((comps[2] as NSString).floatValue)
+            
+            self.color = UIColor(red: r, green: g, blue: b, alpha: 1)
+        }
     }
 }
 
@@ -31,6 +43,7 @@ class Article {
     let text: String
     let imageURL: String?
     let stats: Stats?
+    let category: Category?
     
     init(data: AnyObject) {
         
@@ -43,6 +56,9 @@ class Article {
         
         if let stats: AnyObject? = data["stats"] {
             self.stats = Stats(data: stats!)
+        }
+        if let cat: AnyObject? = data["category"] {
+            self.category = Category(data: cat!)
         }
     }
 }
