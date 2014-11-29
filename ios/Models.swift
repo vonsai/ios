@@ -49,11 +49,11 @@ class Article {
     let ts: NSTimeInterval?
     
     init(data: AnyObject) {
-        
+    
         self.id = data["id"] as String
         self.title = data["title"] as String
         self.subtitle = data["subtitle"] as String?
-        self.description = data["description"] as String?
+        self.description = data["descri"] as String?
         self.text = data["text"] as String
         self.imageURL = data["imageURL"] as String?
         self.shares = data["shares"] as String?
