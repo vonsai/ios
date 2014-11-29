@@ -12,14 +12,16 @@ class ArticleView: UIViewController {
     
     @IBOutlet var webView: UIWebView?
     @IBOutlet var imageView: UIImageView?
+    @IBOutlet var titleLabel: UILabel?
     
     var article: Article?
     
-    var webViewFont = "Helvetica Neue"
+    var webViewFont = "Helvetica"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         var html = article?.text
+        titleLabel?.text = article?.title
         if self.article != nil {
             if self.article?.imageURL != nil {
                 dispatch_async(dispatch_get_main_queue(), {
@@ -38,6 +40,16 @@ class ArticleView: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func popView () {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func shareView (){
+        let firstActivityItem = "\(self.article!.title) via @elmundoes #bonsai #theapproom"
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
+        self.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
 }
