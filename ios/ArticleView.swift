@@ -11,6 +11,7 @@ import UIKit
 class ArticleView: UIViewController {
     
     @IBOutlet var webView: UIWebView?
+    @IBOutlet var imageView: UIImageView?
     
     var article: Article?
     
@@ -20,7 +21,7 @@ class ArticleView: UIViewController {
         super.viewDidLoad()
         var html = article?.text
         self.webView?.loadHTMLString(html, baseURL: nil)
-        self.title = article?.category?.name
+        self.navigationController?.navigationBarHidden = true
         webView?.stringByEvaluatingJavaScriptFromString("document.body.style.fontFamily = '\(webViewFont)'")
     }
     
