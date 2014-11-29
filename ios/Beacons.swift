@@ -19,7 +19,6 @@ class Beacons: NSObject, CLLocationManagerDelegate {
         super.init()
         self.locationManager.delegate = self
         self.locationManager.requestAlwaysAuthorization()
-        self.locationManager.requestWhenInUseAuthorization()
         
         var uuid = NSUUID(UUIDString: "D9B9EC1F-3925-43D0-80A9-1E39D4CEA95D")
         self.beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: "thei bicon")
@@ -36,7 +35,7 @@ class Beacons: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        
+        println("auth")
     }
     
     func locationManager(manager: CLLocationManager!, didDetermineState state: CLRegionState, forRegion region: CLRegion!) {

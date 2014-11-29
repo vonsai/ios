@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "accessToken")
         NSUserDefaults.standardUserDefaults().synchronize()
+        
         // Override point for customization after application launch.
         
         /*var api = Api()
@@ -64,6 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(application: UIApplication) {
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "accessToken")
+        NSUserDefaults.standardUserDefaults().synchronize()
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 

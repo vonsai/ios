@@ -23,8 +23,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Beacons()
         self.loadCategories()
-       
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     func loadCategories() {
-        if api.isAuthenticated {
+        if api.isAuthenticated && !NSUserDefaults.standardUserDefaults().boolForKey("setCategories"){
             api.getCategories { (cats) -> () in
                 self.categories = cats
                 println(cats)
@@ -109,6 +110,7 @@ class ViewController: UIViewController {
             api.postCategories(self.categories!, cb: { (ok) -> () in
                 
                 if ok {
+                    NSUserDefaults.standardUserDefaults().setBool(true, forKey: "setCategories")
                     println("everything is good bro")
                 }
                 
