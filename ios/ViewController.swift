@@ -75,11 +75,11 @@ class ViewController: UIViewController {
             categoryNameLabel!.layer.addAnimation(trans, forKey: nil)
             
             self.categoryNameLabel?.text = category.name
-            var bgImage = UIImage(named: "category_\(category.name.lowercaseString)")
+            var bgImage = UIImage(named: "category_\(category.name.lowercaseString).png")
             if bgImage != nil {
                 categoryBackgroundImage!.image = bgImage
             } else {
-                categoryBackgroundImage!.image = UIImage(named: "category_default")
+                categoryBackgroundImage!.image = UIImage(named: "category_default.png")
             }
             var likeStep = self.convertValueToLikeStep(category.value)
             var likeImage = UIImage(named: "lovecircle_\(likeStep).png")
