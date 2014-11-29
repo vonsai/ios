@@ -75,7 +75,7 @@ class ViewController: UIViewController {
             trans.type = kCATransitionFade
             categoryBackgroundImage!.layer.addAnimation(trans, forKey:nil)
             categoryNameLabel!.layer.addAnimation(trans, forKey: nil)
-            //self.categoryColorDecorator?.backgroundColor = category.color
+            self.categoryColorDecorator?.backgroundColor = category.color
             self.categoryNameLabel?.text = category.name
             var bgImage = UIImage(named: "category_\(category.name.lowercaseString).png")
             if bgImage != nil {

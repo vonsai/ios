@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
-
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -429,11 +427,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mBR-2s-wN1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mBR-2s-wN1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="144"/>
                                 <color key="backgroundColor" red="0.16862745098039217" green="0.17647058823529413" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="144" id="Zj7-MZ-AKp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u8x-MF-MoY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="144"/>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.1764705882" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="0f1-cF-Kvt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="144" id="beh-QP-dTw"/>
                                 </constraints>
                             </imageView>
                             <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="IOY-kf-eld">
@@ -462,12 +468,15 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOMBRE DE NOTISIA" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1D-ij-w6y">
                                 <rect key="frame" x="80" y="15" width="440" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="Owb-yS-4FJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrD-0X-89U">
-                                <rect key="frame" x="20" y="145" width="560" height="406"/>
+                                <rect key="frame" x="20" y="145" width="560" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
@@ -483,6 +492,7 @@
                             <constraint firstItem="r1D-ij-w6y" firstAttribute="leading" secondItem="IOY-kf-eld" secondAttribute="trailing" constant="20" id="9Dd-hB-fO2"/>
                             <constraint firstItem="MrD-0X-89U" firstAttribute="leading" secondItem="aIG-JM-kjb" secondAttribute="leading" id="9ko-Ug-xSh"/>
                             <constraint firstItem="UKD-6A-ZHb" firstAttribute="leading" secondItem="r1D-ij-w6y" secondAttribute="trailing" constant="20" id="AlH-0t-yfH"/>
+                            <constraint firstItem="u8x-MF-MoY" firstAttribute="leading" secondItem="aIG-JM-kjb" secondAttribute="leadingMargin" constant="-16" id="FuH-ch-RM6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MrD-0X-89U" secondAttribute="trailing" constant="-16" id="Gig-a8-Qnn"/>
                             <constraint firstItem="mBR-2s-wN1" firstAttribute="top" secondItem="MrD-0X-89U" secondAttribute="top" constant="-145" id="NWp-eg-jkf"/>
                             <constraint firstItem="MrD-0X-89U" firstAttribute="leading" secondItem="aIG-JM-kjb" secondAttribute="leadingMargin" constant="20" id="PBt-UE-m4z"/>
@@ -506,7 +516,9 @@
                             <constraint firstItem="MrD-0X-89U" firstAttribute="top" secondItem="mBR-2s-wN1" secondAttribute="bottom" constant="1" id="nRt-5G-rEt"/>
                             <constraint firstItem="r1D-ij-w6y" firstAttribute="top" secondItem="UKD-6A-ZHb" secondAttribute="top" id="nnh-hG-dgg"/>
                             <constraint firstAttribute="trailing" secondItem="MrD-0X-89U" secondAttribute="trailing" id="rwR-uv-FUo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u8x-MF-MoY" secondAttribute="trailing" constant="-16" id="smB-mS-fg0"/>
                             <constraint firstItem="mBR-2s-wN1" firstAttribute="leading" secondItem="aIG-JM-kjb" secondAttribute="leading" id="tfD-3s-GBt"/>
+                            <constraint firstItem="u8x-MF-MoY" firstAttribute="top" secondItem="aIG-JM-kjb" secondAttribute="topMargin" id="uJb-nE-6K6"/>
                             <constraint firstItem="UKD-6A-ZHb" firstAttribute="leading" secondItem="r1D-ij-w6y" secondAttribute="trailing" constant="67" id="vSJ-wA-Ngd"/>
                             <constraint firstItem="IOY-kf-eld" firstAttribute="leading" secondItem="aIG-JM-kjb" secondAttribute="leading" id="x7Z-2k-jBz"/>
                             <constraint firstItem="mBR-2s-wN1" firstAttribute="top" secondItem="aIG-JM-kjb" secondAttribute="top" id="xsm-7F-Jk0"/>
