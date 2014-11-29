@@ -61,8 +61,13 @@ class NewsLiker: UIViewController {
         self.articleContent?.textContainerInset = UIEdgeInsetsZero
         self.articleContent?.textContainer.lineFragmentPadding = 0
         self.articleTitle?.text = article.title
-        var url = NSURL(string: article.imageURL!)
-        self.articleImageView?.image = UIImage(data: NSData(contentsOfURL: url!)!)
+        if article.imageURL != nil {
+            dispatch_async(dispatch_get_main_queue(), {
+                var url = NSURL(string: article.imageURL!)
+                var data = NSData(contentsOfURL: url!)
+                self.articleImageView?.image = UIImage(data: data!)
+            })
+        }
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "HH:mm dd-MM-yyyy"
         self.articleTime?.text = dateFormatter.stringFromDate(article.date!)

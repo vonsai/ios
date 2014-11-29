@@ -316,10 +316,10 @@
                     <connections>
                         <outlet property="articleCategory" destination="oFu-nc-Dbm" id="bRL-Jp-55l"/>
                         <outlet property="articleContent" destination="nwa-8H-KNB" id="n1O-tA-TmQ"/>
+                        <outlet property="articleImageView" destination="EJx-NC-R7b" id="DDF-OC-5RP"/>
                         <outlet property="articleShares" destination="Pvd-qi-G0w" id="wWd-In-L5x"/>
                         <outlet property="articleTime" destination="FtC-HV-mpV" id="gfO-yb-OPt"/>
                         <outlet property="articleTitle" destination="rS0-uF-9o6" id="znb-MY-ECj"/>
-                        <segue destination="HQI-kU-eBR" kind="show" id="rRn-LA-0VW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GqT-p3-Ays" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -400,20 +400,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mBR-2s-wN1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="Zj7-MZ-AKp"/>
+                                </constraints>
+                            </imageView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrD-0X-89U">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="145" width="600" height="459"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MrD-0X-89U" firstAttribute="leading" secondItem="aIG-JM-kjb" secondAttribute="leading" id="1ET-1v-opL"/>
+                            <constraint firstAttribute="trailing" secondItem="mBR-2s-wN1" secondAttribute="trailing" id="2qs-FR-nA1"/>
                             <constraint firstItem="MrD-0X-89U" firstAttribute="leading" secondItem="aIG-JM-kjb" secondAttribute="leading" id="9ko-Ug-xSh"/>
-                            <constraint firstItem="YHU-fi-KUC" firstAttribute="top" secondItem="MrD-0X-89U" secondAttribute="bottom" id="Zog-DB-pPh"/>
+                            <constraint firstItem="mBR-2s-wN1" firstAttribute="top" secondItem="MrD-0X-89U" secondAttribute="top" constant="-145" id="NWp-eg-jkf"/>
+                            <constraint firstItem="YHU-fi-KUC" firstAttribute="top" secondItem="MrD-0X-89U" secondAttribute="bottom" constant="-4" id="Zog-DB-pPh"/>
                             <constraint firstAttribute="trailing" secondItem="MrD-0X-89U" secondAttribute="trailing" id="eiK-zi-gjl"/>
-                            <constraint firstItem="MrD-0X-89U" firstAttribute="top" secondItem="AZa-EF-LaL" secondAttribute="bottom" id="zI5-5H-an8"/>
+                            <constraint firstItem="mBR-2s-wN1" firstAttribute="top" secondItem="MrD-0X-89U" secondAttribute="top" constant="-141" id="fFY-uo-Xr6"/>
+                            <constraint firstAttribute="trailing" secondItem="MrD-0X-89U" secondAttribute="trailing" id="hfN-Hl-imi"/>
+                            <constraint firstItem="mBR-2s-wN1" firstAttribute="top" secondItem="MrD-0X-89U" secondAttribute="top" constant="-145" id="iqu-1v-SBv"/>
+                            <constraint firstItem="YHU-fi-KUC" firstAttribute="top" secondItem="MrD-0X-89U" secondAttribute="bottom" constant="-4" id="j0o-HK-tZ5"/>
+                            <constraint firstItem="YHU-fi-KUC" firstAttribute="top" secondItem="MrD-0X-89U" secondAttribute="bottom" constant="-4" id="jWE-an-Y61"/>
+                            <constraint firstItem="YHU-fi-KUC" firstAttribute="top" secondItem="MrD-0X-89U" secondAttribute="bottom" constant="-4" id="oQL-Ad-085"/>
+                            <constraint firstAttribute="trailing" secondItem="MrD-0X-89U" secondAttribute="trailing" id="rwR-uv-FUo"/>
+                            <constraint firstItem="mBR-2s-wN1" firstAttribute="leading" secondItem="aIG-JM-kjb" secondAttribute="leading" id="tfD-3s-GBt"/>
+                            <constraint firstItem="mBR-2s-wN1" firstAttribute="top" secondItem="aIG-JM-kjb" secondAttribute="top" id="xsm-7F-Jk0"/>
+                            <constraint firstItem="MrD-0X-89U" firstAttribute="leading" secondItem="aIG-JM-kjb" secondAttribute="leading" id="zdO-oe-mno"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fFY-uo-Xr6"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="mBR-2s-wN1" id="GeC-du-JB9"/>
                         <outlet property="webView" destination="MrD-0X-89U" id="dbo-aE-cgY"/>
                     </connections>
                 </viewController>
@@ -452,6 +476,6 @@
         <image name="next.png" width="96" height="94"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rRn-LA-0VW"/>
+        <segue reference="wSY-lr-vem"/>
     </inferredMetricsTieBreakers>
 </document>
