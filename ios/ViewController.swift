@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
     
@@ -61,12 +62,19 @@ class ViewController: UIViewController {
         self.shouldShowBackItem()
         if let cats = self.categories {
             var category = cats[self.categoryCount]
+            
+            var trans = CATransition()
+            trans.duration = 0.4
+            trans.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            trans.type = kCATransitionFade
+            categoryBackgroundImage!.layer.addAnimation(trans, forKey:nil)
+            categoryNameLabel!.layer.addAnimation(trans, forKey: nil)
+            
             self.categoryNameLabel?.text = category.name
-            var bgImage = UIImage(named: "category_\(category.name)")
+            var bgImage = UIImage(named: "category_\(category.name.lowercaseString)")
             if bgImage != nil {
-                UIView.transitionWithView(self.categoryBackgroundImage!, duration: 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
-                   self.categoryBackgroundImage!.image = bgImage
-                }, completion: nil)
+                
+                categoryBackgroundImage!.image = bgImage
             }
             var likeStep = self.convertValueToLikeStep(category.value)
             var likeImage = UIImage(named: "lovecircle_\(likeStep).png")
