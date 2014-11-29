@@ -61,6 +61,12 @@ class ViewController: UIViewController {
         if let cats = self.categories {
             var category = cats[self.categoryCount]
             self.categoryNameLabel?.text = category.name
+            var bgImage = UIImage(named: "category_\(category.name)")
+            if bgImage != nil {
+                UIView.transitionWithView(self.categoryBackgroundImage!, duration: 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                   self.categoryBackgroundImage!.image = bgImage
+                }, completion: nil)
+            }
             var likeStep = self.convertValueToLikeStep(category.value)
             var likeImage = UIImage(named: "lovecircle_\(likeStep).png")
             self.categoryLikeImageView?.image = likeImage?
@@ -117,8 +123,6 @@ class ViewController: UIViewController {
         self.categoryCount -= 1
         self.launchView()
     }
-    
-
 
 }
 
