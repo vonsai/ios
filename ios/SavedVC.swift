@@ -50,7 +50,7 @@ class SavedVC: UITableViewController {
         }
         
         var article = self.articles[indexPath.row]
-        cell!.textLabel.text = article.title
+        cell!.textLabel?.text = article.title
         cell!.detailTextLabel?.text = article.category?.name
         cell!.tag = indexPath.row
         
