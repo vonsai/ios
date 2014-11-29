@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		928878BF1A29E0F40083DDF0 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928878BE1A29E0F40083DDF0 /* ArticleView.swift */; };
 		92924D201A291C3800CB4ABE /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D191A291C3800CB4ABE /* back@2x.png */; };
 		92924D261A291C3800CB4ABE /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D1F1A291C3800CB4ABE /* next.png */; };
 		92924D281A292B0000CB4ABE /* category_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D271A292B0000CB4ABE /* category_default@2x.png */; };
@@ -81,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		928878BE1A29E0F40083DDF0 /* ArticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		92924D191A291C3800CB4ABE /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		92924D1F1A291C3800CB4ABE /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		92924D271A292B0000CB4ABE /* category_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_default@2x.png"; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				E1D4F9A61A253762005E1CD5 /* Api.swift */,
 				E13C0D901A2942A400757D6C /* Beacons.swift */,
 				E13C0D8E1A2909C300757D6C /* Models.swift */,
+				928878BE1A29E0F40083DDF0 /* ArticleView.swift */,
 				E1D4F9881A253540005E1CD5 /* Main.storyboard */,
 				E1D4F98B1A253540005E1CD5 /* Images.xcassets */,
 				92924D3D1A295D0200CB4ABE /* Audios */,
@@ -315,7 +318,7 @@
 				TargetAttributes = {
 					E1D4F97E1A253540005E1CD5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 72RF4L6QZW;
+						DevelopmentTeam = U296BK865E;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -324,7 +327,7 @@
 					};
 					E1D4F9931A253540005E1CD5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 72RF4L6QZW;
+						DevelopmentTeam = U296BK865E;
 						TestTargetID = E1D4F97E1A253540005E1CD5;
 					};
 				};
@@ -403,6 +406,7 @@
 				E13C0D911A2942A400757D6C /* Beacons.swift in Sources */,
 				E13C0D8D1A29010600757D6C /* SwiftyJSON.swift in Sources */,
 				E1D4F9A71A253762005E1CD5 /* Api.swift in Sources */,
+				928878BF1A29E0F40083DDF0 /* ArticleView.swift in Sources */,
 				E1D4F9851A253540005E1CD5 /* AppDelegate.swift in Sources */,
 				E13C0D8F1A2909C300757D6C /* Models.swift in Sources */,
 			);

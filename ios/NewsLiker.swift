@@ -20,6 +20,7 @@ class NewsLiker: UIViewController {
     @IBOutlet var articleContent: UITextView?
     @IBOutlet var articleShares: UILabel?
     @IBOutlet var articleCategory: UILabel?
+    @IBOutlet var articleImageView: UIImageView?
     
 
     var articleCount: Int = 0
@@ -60,6 +61,8 @@ class NewsLiker: UIViewController {
         self.articleContent?.textContainerInset = UIEdgeInsetsZero
         self.articleContent?.textContainer.lineFragmentPadding = 0
         self.articleTitle?.text = article.title
+        var url = NSURL(string: article.imageURL!)
+        self.articleImageView?.image = UIImage(data: NSData(contentsOfURL: url!)!)
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "HH:mm dd-MM-yyyy"
         self.articleTime?.text = dateFormatter.stringFromDate(article.date!)
@@ -107,6 +110,11 @@ class NewsLiker: UIViewController {
         var soundId: SystemSoundID = 0
         AudioServicesCreateSystemSoundID(soundURL, &soundId)
         AudioServicesPlaySystemSound(soundId)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var vc = segue.destinationViewController as ArticleView
+        vc.article = self.articles[self.articleCount]
     }
     
     override func didReceiveMemoryWarning() {
