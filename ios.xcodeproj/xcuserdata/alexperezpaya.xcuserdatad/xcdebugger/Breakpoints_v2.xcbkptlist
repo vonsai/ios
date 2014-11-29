@@ -20,13 +20,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ios/ViewController.swift"
-            timestampString = "438916682.769309"
+            timestampString = "438919190.651186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "clickedLikeButton()"
-            landmarkType = "5">
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -36,12 +36,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ios/ViewController.swift"
-            timestampString = "438916682.769309"
+            timestampString = "438919190.651186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "clickedLikeButton()"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "convertValueToLikeStep(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

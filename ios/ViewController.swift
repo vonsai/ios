@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -104,12 +105,13 @@ class ViewController: UIViewController {
             if category.value > 1 {
                 category.value = 0.2
             }
+            playLikeSoundWithNumber(self.convertValueToLikeStep(category.value))
             changeLikeImageWithValue(category.value)
         }
     }
     
     func changeLikeImageWithValue (value: Float) {
-        var likeStep = convertValueToLikeStep(value)
+        var likeStep = self.convertValueToLikeStep(value)
         var likeImage = UIImage(named: "lovecircle_\(likeStep).png")
         self.categoryLikeImageView?.image = likeImage?
     }
@@ -133,6 +135,16 @@ class ViewController: UIViewController {
     @IBAction func clickedBackButton (){
         self.categoryCount -= 1
         self.launchView()
+    }
+    
+    func playLikeSoundWithNumber (number: Int){
+        if number == 1 {
+            return
+        }
+        var soundURL = NSBundle.mainBundle().URLForResource("audio_like_\(number)", withExtension: "wav")
+        var soundId: SystemSoundID = 0
+        AudioServicesCreateSystemSoundID(soundURL, &soundId)
+        AudioServicesPlaySystemSound(soundId)
     }
 
 }

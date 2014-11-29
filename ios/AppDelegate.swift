@@ -19,18 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSUserDefaults.standardUserDefaults().synchronize()
         
         // Override point for customization after application launch.
-        
-        var api = Api()
-        
-        api.auth {
-            (auth, hasSet) in
-            
-            api.getArticles(true) { (art) -> () in
-                println(art.count)
-            }
-            
-        }
-        
+                
         return true
     }
 
