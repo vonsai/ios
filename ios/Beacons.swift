@@ -45,6 +45,7 @@ class Beacons: NSObject, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
         
+        println("hola")
         if beacons.count > 0 {
             if !foundBeacon {
                 self.callback?(beaconId: "\(beacons[0].major).\(beacons[0].minor)")

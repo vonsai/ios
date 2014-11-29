@@ -9,7 +9,7 @@
 import UIKit
 
 class NewsLiker: UIViewController {
-
+    let beacon = Beacons()
     let api = Api()
     var articles = [Article]()
     
@@ -31,8 +31,17 @@ class NewsLiker: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 242, green: 200, blue: 200, alpha: 1)
         self.loadArticles()
+        //self.beacons()
     }
-    
+    func beacons() {
+        beacon.start {
+            (bId) in
+            self.api.getArticles(false, beacon: bId) {
+                (arts) -> () in
+                println(arts[0].title)
+            }
+        }
+    }
     func loadArticles(){
         if self.articleCount < self.articles.count {
             return launchView()
@@ -44,7 +53,7 @@ class NewsLiker: UIViewController {
             self.articles = arts
             self.launchView()
             for a in arts {
-                println(a.category!.name)
+               
             }
         }
     }

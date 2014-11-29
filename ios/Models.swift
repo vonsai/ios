@@ -26,9 +26,9 @@ class Category {
         if let c = (data["color"] as String?){
             var comps = c.componentsSeparatedByString(".")
             
-            let r = CGFloat((comps[0] as NSString).floatValue)
-            let g = CGFloat((comps[1] as NSString).floatValue)
-            let b = CGFloat((comps[2] as NSString).floatValue)
+            let r = CGFloat((comps[0].stringByReplacingOccurrencesOfString(",", withString: ".") as NSString).floatValue)
+            let g = CGFloat((comps[1].stringByReplacingOccurrencesOfString(",", withString: ".") as NSString).floatValue)
+            let b = CGFloat((comps[2].stringByReplacingOccurrencesOfString(",", withString: ".") as NSString).floatValue)
             
             self.color = UIColor(red: r, green: g, blue: b, alpha: 1)
         }
