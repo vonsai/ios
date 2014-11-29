@@ -37,7 +37,7 @@ class Api {
         if let access = accessToken {
             token = access
         }
-        println("i got token \(token)")
+        
         Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["X-Api-Timestamp": timestamp, "X-Api-Key": apiKey, "X-Api-Signature": requestSignature(timestamp), "X-Api-Token":token]
         
         if method == .GET {
@@ -154,8 +154,16 @@ extension Api {
 
 func uuid() -> String {
     
+    var uuid = NSUserDefaults.standardUserDefaults().stringForKey("uuid")
+    if let u = uuid {
+        return u
+        
+    }
+    
+    var hack = String(Int(NSDate().timeIntervalSince1970))
+    NSUserDefaults.standardUserDefaults().setObject(hack, forKey: "uuid")
     //TODO: Don't fake it
-    return "holas"
+    return hack
 }
 
 extension String {

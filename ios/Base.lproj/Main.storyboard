@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -25,13 +25,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motoreh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NF0-3v-t0Q">
-                                <rect key="frame" x="240" y="175" width="120" height="37.5"/>
+                                <rect key="frame" x="240" y="175" width="120" height="38"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
                                 <color key="textColor" red="0.30813951192660949" green="0.88324680681826295" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORIA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZD-tv-5Xg">
-                                <rect key="frame" x="250" y="150" width="100.5" height="21.5"/>
+                                <rect key="frame" x="250" y="150" width="101" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lovecircle_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-kU-A79">
-                                <rect key="frame" x="276" y="321.5" width="48" height="48"/>
+                                <rect key="frame" x="276" y="322" width="48" height="48"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="LKm-OB-K1L"/>
@@ -70,6 +70,13 @@
                                     <outletCollection property="gestureRecognizers" destination="mEI-Nc-sPQ" appends="YES" id="GBF-GB-rAW"/>
                                 </connections>
                             </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTm-NT-xS3">
+                                <rect key="frame" x="-8" y="591" width="600" height="6"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="9wn-eM-fbq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.37447980335171704" green="1" blue="0.38028488043263931" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -82,6 +89,7 @@
                             <constraint firstItem="0Eb-kU-A79" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="252" id="Bk8-RY-c9Y"/>
                             <constraint firstItem="NF0-3v-t0Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="155" id="Blt-DM-n2W"/>
                             <constraint firstAttribute="trailing" secondItem="zxf-pK-cte" secondAttribute="trailing" id="Gch-jh-nrK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PTm-NT-xS3" secondAttribute="bottom" id="JTO-t5-TiX"/>
                             <constraint firstItem="wFf-jS-Ugl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Lan-bH-3lq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O59-3h-hpC" secondAttribute="bottom" constant="15" id="PHV-7I-qE4"/>
                             <constraint firstAttribute="centerX" secondItem="0Eb-kU-A79" secondAttribute="centerX" id="PJK-74-N8o"/>
@@ -128,7 +136,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-361" y="16.5"/>
+            <point key="canvasLocation" x="-361" y="16"/>
         </scene>
     </scenes>
     <resources>
