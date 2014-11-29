@@ -5,6 +5,24 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--News Liker-->
+        <scene sceneID="P2w-vt-o4d">
+            <objects>
+                <viewController id="8OU-Us-gUg" customClass="NewsLiker" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dUe-Ef-rA1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iu7-3n-63o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SDZ-J4-xqn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Yg-zT-IoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362" y="-765"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -133,11 +151,140 @@
             </objects>
             <point key="canvasLocation" x="-361" y="16"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="rJO-2c-720">
+            <objects>
+                <navigationController id="PCQ-WV-tyf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="LbR-Jd-PdA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ycJ-aF-Ibt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7yg-oU-Fdc" kind="relationship" relationship="rootViewController" id="crL-Xx-gPv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMh-gV-TzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1434" y="-334"/>
+        </scene>
+        <!--News Liker-->
+        <scene sceneID="LCI-F1-qrZ">
+            <objects>
+                <viewController id="7yg-oU-Fdc" customClass="NewsLiker" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zct-n5-cJc"/>
+                        <viewControllerLayoutGuide type="bottom" id="7G5-oo-SL6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jMu-oC-rqx">
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="1136"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_deportes.png" translatesAutoresizingMaskIntoConstraints="NO" id="bxG-Bw-BdQ">
+                                <rect key="frame" x="40" y="104" width="560" height="287"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="287" id="KjJ-cD-zad"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lovecircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="mVY-b5-LC9">
+                                <rect key="frame" x="436" y="952" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lovecircle_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="aY2-14-Mfl">
+                                <rect key="frame" x="104" y="952" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-hW-r40">
+                                <rect key="frame" x="40" y="391" width="560" height="521"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.035351606610000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZEa-hW-r40" secondAttribute="trailing" constant="40" id="1WV-Tq-pnn"/>
+                            <constraint firstItem="bxG-Bw-BdQ" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="60" id="84W-fO-vbO"/>
+                            <constraint firstItem="ZEa-hW-r40" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="40" id="ADS-Eu-aDV"/>
+                            <constraint firstItem="bxG-Bw-BdQ" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="40" id="GD8-y5-ctY"/>
+                            <constraint firstItem="bxG-Bw-BdQ" firstAttribute="top" secondItem="zct-n5-cJc" secondAttribute="bottom" constant="36" id="M0q-Nd-3pN"/>
+                            <constraint firstItem="7G5-oo-SL6" firstAttribute="top" secondItem="mVY-b5-LC9" secondAttribute="bottom" constant="35" id="NxN-QW-ltL"/>
+                            <constraint firstItem="ZEa-hW-r40" firstAttribute="top" secondItem="bxG-Bw-BdQ" secondAttribute="bottom" id="QDD-QT-qg3"/>
+                            <constraint firstAttribute="trailing" secondItem="bxG-Bw-BdQ" secondAttribute="trailing" constant="40" id="Wkn-wy-wbP"/>
+                            <constraint firstItem="bxG-Bw-BdQ" firstAttribute="top" secondItem="jMu-oC-rqx" secondAttribute="topMargin" constant="80" id="YKK-6L-iYt"/>
+                            <constraint firstItem="7G5-oo-SL6" firstAttribute="top" secondItem="aY2-14-Mfl" secondAttribute="bottom" constant="35" id="Ya9-2P-DGG"/>
+                            <constraint firstItem="7G5-oo-SL6" firstAttribute="top" secondItem="mVY-b5-LC9" secondAttribute="bottom" constant="134" id="bCE-LS-Qnh"/>
+                            <constraint firstItem="aY2-14-Mfl" firstAttribute="top" secondItem="ZEa-hW-r40" secondAttribute="bottom" constant="40" id="ch0-NY-d28"/>
+                            <constraint firstItem="ZEa-hW-r40" firstAttribute="top" secondItem="zct-n5-cJc" secondAttribute="bottom" id="dLL-s3-BmC"/>
+                            <constraint firstItem="7G5-oo-SL6" firstAttribute="top" secondItem="ZEa-hW-r40" secondAttribute="bottom" constant="322" id="eZq-DF-qAt"/>
+                            <constraint firstItem="aY2-14-Mfl" firstAttribute="leading" secondItem="jMu-oC-rqx" secondAttribute="leading" constant="104" id="hPt-P2-tVI"/>
+                            <constraint firstItem="bxG-Bw-BdQ" firstAttribute="top" secondItem="zct-n5-cJc" secondAttribute="bottom" constant="40" id="jOp-dE-dfP"/>
+                            <constraint firstAttribute="trailing" secondItem="bxG-Bw-BdQ" secondAttribute="trailing" constant="60" id="ngN-du-zhV"/>
+                            <constraint firstItem="bxG-Bw-BdQ" firstAttribute="top" secondItem="jMu-oC-rqx" secondAttribute="topMargin" constant="60" id="nh6-9u-RSY"/>
+                            <constraint firstAttribute="trailing" secondItem="mVY-b5-LC9" secondAttribute="trailing" constant="104" id="pKh-Un-9wT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="84W-fO-vbO"/>
+                                <exclude reference="M0q-Nd-3pN"/>
+                                <exclude reference="YKK-6L-iYt"/>
+                                <exclude reference="ngN-du-zhV"/>
+                                <exclude reference="nh6-9u-RSY"/>
+                                <exclude reference="dLL-s3-BmC"/>
+                                <exclude reference="bCE-LS-Qnh"/>
+                                <exclude reference="eZq-DF-qAt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="eVs-18-Upt"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="640" height="1136"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqT-p3-Ays" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="-334"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="27F-h7-NML">
+            <objects>
+                <viewController id="Ra3-YU-RuQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="reC-sv-I73"/>
+                        <viewControllerLayoutGuide type="bottom" id="u5Y-er-BoS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bzy-lf-HX4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="3ky-Jv-SXQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4x-4j-cKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1362" y="346"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="X41-Pi-oYn">
+            <objects>
+                <tabBarController storyboardIdentifier="end" id="avM-sq-rXm" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aph-NF-MJG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ra3-YU-RuQ" kind="relationship" relationship="viewControllers" id="dBU-5B-LoS"/>
+                        <segue destination="PCQ-WV-tyf" kind="relationship" relationship="viewControllers" id="DDr-G8-eOa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NpG-Ji-6eq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="18"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back.png" width="48" height="47"/>
         <image name="category_default.png" width="320" height="568"/>
+        <image name="category_deportes.png" width="320" height="568"/>
         <image name="lovecircle_1.png" width="48" height="48"/>
+        <image name="lovecircle_4.png" width="100" height="100"/>
         <image name="next.png" width="96" height="94"/>
     </resources>
 </document>

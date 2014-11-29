@@ -53,7 +53,7 @@ class ViewController: UIViewController {
                 if !hasSet {
                     self.loadCategories()
                 } else {
-                    println("NO CARGO OSTIAS")
+                    self.openTabBar()
                 }
             }
         }
@@ -74,8 +74,9 @@ class ViewController: UIViewController {
             self.categoryNameLabel?.text = category.name
             var bgImage = UIImage(named: "category_\(category.name.lowercaseString)")
             if bgImage != nil {
-                
                 categoryBackgroundImage!.image = bgImage
+            } else {
+                categoryBackgroundImage!.image = UIImage(named: "category_default")
             }
             var likeStep = self.convertValueToLikeStep(category.value)
             var likeImage = UIImage(named: "lovecircle_\(likeStep).png")
@@ -122,6 +123,7 @@ class ViewController: UIViewController {
                 if ok {
                     NSUserDefaults.standardUserDefaults().setBool(true, forKey: "setCategories")
                     println("everything is good bro")
+                    self.openTabBar()
                 }
                 
             })
@@ -144,6 +146,11 @@ class ViewController: UIViewController {
         var soundId: SystemSoundID = 0
         AudioServicesCreateSystemSoundID(soundURL, &soundId)
         AudioServicesPlaySystemSound(soundId)
+    }
+    
+    func openTabBar (){
+        var vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("end") as UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
     }
 
 }
