@@ -300,7 +300,7 @@
 				TargetAttributes = {
 					E1D4F97E1A253540005E1CD5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 72RF4L6QZW;
+						DevelopmentTeam = U296BK865E;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -309,7 +309,7 @@
 					};
 					E1D4F9931A253540005E1CD5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 72RF4L6QZW;
+						DevelopmentTeam = U296BK865E;
 						TestTargetID = E1D4F97E1A253540005E1CD5;
 					};
 				};
