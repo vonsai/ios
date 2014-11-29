@@ -335,7 +335,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="xac-eo-S4q">
                     <connections>
-                        <segue destination="HQI-kU-eBR" kind="show" id="wSY-lr-vem"/>
+                        <segue destination="HQI-kU-eBR" kind="show" id="SQN-qV-MI0"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -491,5 +491,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ARc-bA-lCt"/>
+
     </inferredMetricsTieBreakers>
 </document>
