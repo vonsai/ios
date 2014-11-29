@@ -20,6 +20,11 @@
 		92924D301A2952E400CB4ABE /* category_deportes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D2B1A2952E400CB4ABE /* category_deportes@2x.png */; };
 		92924D311A2952E400CB4ABE /* category_economia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D2C1A2952E400CB4ABE /* category_economia@2x.png */; };
 		92924D321A2952E400CB4ABE /* category_motor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92924D2D1A2952E400CB4ABE /* category_motor@2x.png */; };
+		92924D381A295CF500CB4ABE /* audio_like_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92924D331A295CF500CB4ABE /* audio_like_2.wav */; };
+		92924D391A295CF500CB4ABE /* audio_like_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92924D341A295CF500CB4ABE /* audio_like_3.wav */; };
+		92924D3A1A295CF500CB4ABE /* audio_like_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92924D351A295CF500CB4ABE /* audio_like_4.wav */; };
+		92924D3B1A295CF500CB4ABE /* audio_like_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92924D361A295CF500CB4ABE /* audio_like_1.wav */; };
+		92924D3C1A295CF500CB4ABE /* audio_like_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92924D371A295CF500CB4ABE /* audio_like_5.wav */; };
 		E13C0D8B1A29010600757D6C /* Alamo-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C0D881A29010600757D6C /* Alamo-SwiftyJSON.swift */; };
 		E13C0D8C1A29010600757D6C /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C0D891A29010600757D6C /* Alamofire.swift */; };
 		E13C0D8D1A29010600757D6C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C0D8A1A29010600757D6C /* SwiftyJSON.swift */; };
@@ -81,6 +86,11 @@
 		92924D2B1A2952E400CB4ABE /* category_deportes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_deportes@2x.png"; sourceTree = "<group>"; };
 		92924D2C1A2952E400CB4ABE /* category_economia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_economia@2x.png"; sourceTree = "<group>"; };
 		92924D2D1A2952E400CB4ABE /* category_motor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_motor@2x.png"; sourceTree = "<group>"; };
+		92924D331A295CF500CB4ABE /* audio_like_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio_like_2.wav; sourceTree = "<group>"; };
+		92924D341A295CF500CB4ABE /* audio_like_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio_like_3.wav; sourceTree = "<group>"; };
+		92924D351A295CF500CB4ABE /* audio_like_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio_like_4.wav; sourceTree = "<group>"; };
+		92924D361A295CF500CB4ABE /* audio_like_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio_like_1.wav; sourceTree = "<group>"; };
+		92924D371A295CF500CB4ABE /* audio_like_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio_like_5.wav; sourceTree = "<group>"; };
 		E10D280B1A28E3DB00B18150 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		E13C0D881A29010600757D6C /* Alamo-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamo-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		E13C0D891A29010600757D6C /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
@@ -141,6 +151,18 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
+		92924D3D1A295D0200CB4ABE /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+				92924D331A295CF500CB4ABE /* audio_like_2.wav */,
+				92924D341A295CF500CB4ABE /* audio_like_3.wav */,
+				92924D351A295CF500CB4ABE /* audio_like_4.wav */,
+				92924D361A295CF500CB4ABE /* audio_like_1.wav */,
+				92924D371A295CF500CB4ABE /* audio_like_5.wav */,
+			);
+			name = Audios;
+			sourceTree = "<group>";
+		};
 		E10D280A1A28E3DB00B18150 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +201,7 @@
 				E13C0D8E1A2909C300757D6C /* Models.swift */,
 				E1D4F9881A253540005E1CD5 /* Main.storyboard */,
 				E1D4F98B1A253540005E1CD5 /* Images.xcassets */,
+				92924D3D1A295D0200CB4ABE /* Audios */,
 				92924D181A291C3800CB4ABE /* assets */,
 				E1D4F98D1A253540005E1CD5 /* LaunchScreen.xib */,
 				E1D4F9821A253540005E1CD5 /* Supporting Files */,
@@ -266,7 +289,7 @@
 				TargetAttributes = {
 					E1D4F97E1A253540005E1CD5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 72RF4L6QZW;
+						DevelopmentTeam = U296BK865E;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -275,7 +298,7 @@
 					};
 					E1D4F9931A253540005E1CD5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 72RF4L6QZW;
+						DevelopmentTeam = U296BK865E;
 						TestTargetID = E1D4F97E1A253540005E1CD5;
 					};
 				};
@@ -310,15 +333,20 @@
 				92924D281A292B0000CB4ABE /* category_default@2x.png in Resources */,
 				92924D221A291C3800CB4ABE /* lovecircle_2@2x.png in Resources */,
 				92924D201A291C3800CB4ABE /* back@2x.png in Resources */,
+				92924D381A295CF500CB4ABE /* audio_like_2.wav in Resources */,
 				E1D4F98A1A253540005E1CD5 /* Main.storyboard in Resources */,
+				92924D3A1A295CF500CB4ABE /* audio_like_4.wav in Resources */,
 				E1D4F98F1A253540005E1CD5 /* LaunchScreen.xib in Resources */,
 				92924D2F1A2952E400CB4ABE /* category_tecnologia@2x.png in Resources */,
 				92924D231A291C3800CB4ABE /* lovecircle_3@2x.png in Resources */,
 				92924D211A291C3800CB4ABE /* lovecircle_1@2x.png in Resources */,
 				92924D261A291C3800CB4ABE /* next.png in Resources */,
+				92924D3B1A295CF500CB4ABE /* audio_like_1.wav in Resources */,
 				92924D251A291C3800CB4ABE /* lovecircle_5@2x.png in Resources */,
 				92924D241A291C3800CB4ABE /* lovecircle_4@2x.png in Resources */,
 				92924D311A2952E400CB4ABE /* category_economia@2x.png in Resources */,
+				92924D391A295CF500CB4ABE /* audio_like_3.wav in Resources */,
+				92924D3C1A295CF500CB4ABE /* audio_like_5.wav in Resources */,
 				E1D4F98C1A253540005E1CD5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

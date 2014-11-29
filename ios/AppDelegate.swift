@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /*var api = Api()
         
         api.auth {
-            (auth, hasSet) in
+            (auth
+        , hasSet) in
                 
             println("has set \(hasSet)")
             if !hasSet {
