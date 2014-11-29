@@ -42,7 +42,7 @@ class Api {
         
         if method == .GET {
             
-            request(.GET, "\(self.apiBase)\(path)").responseSwiftyJSON { (_, _, json, error) -> Void in
+            request(.GET, "\(self.apiBase)\(path)", parameters:parameters).responseSwiftyJSON { (_, _, json, error) -> Void in
                 
                 callback(json, error)
             }
@@ -130,14 +130,20 @@ extension Api {
 
 extension Api {
     
-    func getArticles(saved: Bool, cb: ([Article]) -> ()) {
+    func getArticles(saved: Bool, beacon: String?, cb: ([Article]) -> ()) {
         
         var path = "/articles"
         if saved {
             path += "/saved"
         }
         
-        signedRequest(.GET, path:path, parameters: Dictionary<String, String>()){ (j, e) -> () in
+        var body = Dictionary<String, String>()
+        
+        if let b = beacon {
+            body["beacon"] = b
+        }
+        
+        signedRequest(.GET, path:path, parameters: body){ (j, e) -> () in
             
             if e != nil || j["articles"].arrayObject == nil {
                 println("ERROR: \(e)")

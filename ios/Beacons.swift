@@ -13,9 +13,13 @@ class Beacons: NSObject, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
     var beaconRegion = CLBeaconRegion()
-
-    func start(){
+    
+    var foundBeacon = false
+    var callback: ((beaconId: String) -> ())?
+    
+    func start(cb: (beaconId: String) -> ()){
         
+        self.callback = cb
         self.locationManager.delegate = self
         self.locationManager.requestAlwaysAuthorization()
         
@@ -34,18 +38,18 @@ class Beacons: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        println("auth")
     }
     
     func locationManager(manager: CLLocationManager!, didDetermineState state: CLRegionState, forRegion region: CLRegion!) {
-        println("st \(state)")
     }
     
     func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
         
         if beacons.count > 0 {
-            let b = beacons[0] as CLBeacon
-            println("Got b \(b)")
+            if !foundBeacon {
+                self.callback?(beaconId: "\(beacons[0].major).\(beacons[0].minor)")
+                self.foundBeacon = true
+            }
         }
     }
 

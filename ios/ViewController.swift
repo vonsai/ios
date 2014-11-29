@@ -26,7 +26,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        beacon.start()
+        beacon.start {
+            (bId) in
+            self.api.getArticles(false, beacon: bId) {
+                (arts) -> () in
+                println(arts[0].title)
+            }
+        }
         self.loadCategories()
         
         // Do any additional setup after loading the view, typically from a nib.
