@@ -13,15 +13,17 @@ class Beacons: NSObject, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
     var beaconRegion = CLBeaconRegion()
-
-    override init(){
+    
+    var foundBeacon = false
+    var callback: ((beaconId: String) -> ())?
+    
+    func start(cb: (beaconId: String) -> ()){
         
-        super.init()
-        
+        self.callback = cb
         self.locationManager.delegate = self
         self.locationManager.requestAlwaysAuthorization()
         
-        /*var uuid = NSUUID(UUIDString: "D9B9EC1F-3925-43D0-80A9-1E39D4CEA95D")
+        var uuid = NSUUID(UUIDString: "D9B9EC1F-3925-43D0-80A9-1E39D4CEA95D")
         self.beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: "thei bicon")
         
         self.beaconRegion.notifyOnEntry = true
@@ -32,22 +34,22 @@ class Beacons: NSObject, CLLocationManagerDelegate {
         self.locationManager.startRangingBeaconsInRegion(self.beaconRegion)
         self.locationManager.requestStateForRegion(self.beaconRegion)
         
-        println("monitoring for beacon", CLLocationManager.authorizationStatus().rawValue)*/
+        println("monitoring for beacon", CLLocationManager.authorizationStatus().rawValue)
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        println("auth")
     }
     
     func locationManager(manager: CLLocationManager!, didDetermineState state: CLRegionState, forRegion region: CLRegion!) {
-        println("st \(state)")
     }
     
     func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
         
         if beacons.count > 0 {
-            let b = beacons[0] as CLBeacon
-            println("Got b \(b)")
+            if !foundBeacon {
+                self.callback?(beaconId: "\(beacons[0].major).\(beacons[0].minor)")
+                self.foundBeacon = true
+            }
         }
     }
 

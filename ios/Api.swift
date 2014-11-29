@@ -42,7 +42,7 @@ class Api {
         
         if method == .GET {
             
-            request(.GET, "\(self.apiBase)\(path)").responseSwiftyJSON { (_, _, json, error) -> Void in
+            request(.GET, "\(self.apiBase)\(path)", parameters:parameters).responseSwiftyJSON { (_, _, json, error) -> Void in
                 
                 callback(json, error)
             }
@@ -130,9 +130,20 @@ extension Api {
 
 extension Api {
     
-    func getArticles(cb: ([Article]) -> ()) {
+    func getArticles(saved: Bool, beacon: String?, cb: ([Article]) -> ()) {
         
-        signedRequest(.GET, path:"/articles", parameters: Dictionary<String, String>()){ (j, e) -> () in
+        var path = "/articles"
+        if saved {
+            path += "/saved"
+        }
+        
+        var body = Dictionary<String, String>()
+        
+        if let b = beacon {
+            body["beacon"] = b
+        }
+        
+        signedRequest(.GET, path:path, parameters: body){ (j, e) -> () in
             
             if e != nil || j["articles"].arrayObject == nil {
                 println("ERROR: \(e)")
@@ -150,6 +161,19 @@ extension Api {
             }
         }
     }
+    
+    func setArticle(article: Article, save: Bool, cb: (ok: Bool) -> ()){
+        
+        signedRequest(.POST, path: "/article/\(article.id)", parameters: ["stats":["saved": save]]) { (j, e) -> () in
+            if e != nil {
+                println("ERROR: \(e)")
+                cb(ok: false)
+            } else {
+                cb(ok:true)
+            }
+        }
+    }
+    
 }
 
 func uuid() -> String {
