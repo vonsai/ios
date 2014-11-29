@@ -58,7 +58,11 @@ class ViewController: UIViewController {
             api.auth {
                 (auth, hasSet) in
                 if !hasSet {
-                    self.loadCategories()
+                    self.api.getCategories { (cats) -> () in
+                        self.categories = cats
+                        println(cats)
+                        self.launchView()
+                    }
                 } else {
                     self.openTabBar()
                 }

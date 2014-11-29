@@ -26,7 +26,6 @@
 		92E728EF1A29A8B400A436CD /* lovecircle_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E728EA1A29A8B400A436CD /* lovecircle_3@2x.png */; };
 		92E728F01A29A8B400A436CD /* lovecircle_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E728EB1A29A8B400A436CD /* lovecircle_4@2x.png */; };
 		92E728F11A29A8B400A436CD /* lovecircle_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E728EC1A29A8B400A436CD /* lovecircle_5@2x.png */; };
-		92E728F31A29A9E000A436CD /* crosscircle_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E728F21A29A9E000A436CD /* crosscircle_4@2x.png */; };
 		E13C0D8B1A29010600757D6C /* Alamo-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C0D881A29010600757D6C /* Alamo-SwiftyJSON.swift */; };
 		E13C0D8C1A29010600757D6C /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C0D891A29010600757D6C /* Alamofire.swift */; };
 		E13C0D8D1A29010600757D6C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C0D8A1A29010600757D6C /* SwiftyJSON.swift */; };
@@ -34,6 +33,7 @@
 		E13C0D911A2942A400757D6C /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C0D901A2942A400757D6C /* Beacons.swift */; };
 		E13C0D931A2942C300757D6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13C0D921A2942C300757D6C /* CoreLocation.framework */; };
 		E13C0D951A2958F800757D6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13C0D941A2958F800757D6C /* QuartzCore.framework */; };
+		E13C0D971A29AE0800757D6C /* crosscircle_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E13C0D961A29AE0800757D6C /* crosscircle_4@2x.png */; };
 		E1D4F9851A253540005E1CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4F9841A253540005E1CD5 /* AppDelegate.swift */; };
 		E1D4F9871A253540005E1CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4F9861A253540005E1CD5 /* ViewController.swift */; };
 		E1D4F98A1A253540005E1CD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D4F9881A253540005E1CD5 /* Main.storyboard */; };
@@ -95,7 +95,6 @@
 		92E728EA1A29A8B400A436CD /* lovecircle_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lovecircle_3@2x.png"; sourceTree = "<group>"; };
 		92E728EB1A29A8B400A436CD /* lovecircle_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lovecircle_4@2x.png"; sourceTree = "<group>"; };
 		92E728EC1A29A8B400A436CD /* lovecircle_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lovecircle_5@2x.png"; sourceTree = "<group>"; };
-		92E728F21A29A9E000A436CD /* crosscircle_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crosscircle_4@2x.png"; sourceTree = "<group>"; };
 		E10D280B1A28E3DB00B18150 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		E13C0D881A29010600757D6C /* Alamo-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamo-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		E13C0D891A29010600757D6C /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		E13C0D901A2942A400757D6C /* Beacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacons.swift; sourceTree = "<group>"; };
 		E13C0D921A2942C300757D6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E13C0D941A2958F800757D6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E13C0D961A29AE0800757D6C /* crosscircle_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crosscircle_4@2x.png"; sourceTree = "<group>"; };
 		E1D4F97F1A253540005E1CD5 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D4F9831A253540005E1CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D4F9841A253540005E1CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,12 +142,12 @@
 		92924D181A291C3800CB4ABE /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				E13C0D961A29AE0800757D6C /* crosscircle_4@2x.png */,
 				92E728E81A29A8B400A436CD /* lovecircle_1@2x.png */,
 				92E728E91A29A8B400A436CD /* lovecircle_2@2x.png */,
 				92E728EA1A29A8B400A436CD /* lovecircle_3@2x.png */,
 				92E728EB1A29A8B400A436CD /* lovecircle_4@2x.png */,
 				92E728EC1A29A8B400A436CD /* lovecircle_5@2x.png */,
-				92E728F21A29A9E000A436CD /* crosscircle_4@2x.png */,
 				92924D291A2952E400CB4ABE /* category_españa@2x.png */,
 				92924D2A1A2952E400CB4ABE /* category_tecnología@2x.png */,
 				92924D2B1A2952E400CB4ABE /* category_deportes@2x.png */,
@@ -352,8 +352,8 @@
 				92924D261A291C3800CB4ABE /* next.png in Resources */,
 				92924D3B1A295CF500CB4ABE /* audio_like_2.wav in Resources */,
 				92924D391A295CF500CB4ABE /* audio_like_4.wav in Resources */,
-				92E728F31A29A9E000A436CD /* crosscircle_4@2x.png in Resources */,
 				92E728EE1A29A8B400A436CD /* lovecircle_2@2x.png in Resources */,
+				E13C0D971A29AE0800757D6C /* crosscircle_4@2x.png in Resources */,
 				92924D3C1A295CF500CB4ABE /* audio_like_5.wav in Resources */,
 				92E728EF1A29A8B400A436CD /* lovecircle_3@2x.png in Resources */,
 				92E728ED1A29A8B400A436CD /* lovecircle_1@2x.png in Resources */,
