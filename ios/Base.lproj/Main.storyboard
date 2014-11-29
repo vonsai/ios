@@ -369,6 +369,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="HQI-kU-eBR" kind="show" id="ARc-bA-lCt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -377,9 +380,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="CAs-zg-3gL"/>
-                    <connections>
-                        <segue destination="HQI-kU-eBR" kind="show" id="Pqk-Kg-kWR"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yw-bv-5Kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -420,7 +420,7 @@
                                     <constraint firstAttribute="height" constant="144" id="Zj7-MZ-AKp"/>
                                 </constraints>
                             </imageView>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrD-0X-89U">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MrD-0X-89U">
                                 <rect key="frame" x="0.0" y="145" width="600" height="459"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
@@ -490,7 +490,6 @@
         <image name="next.png" width="96" height="94"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Pqk-Kg-kWR"/>
-
+        <segue reference="ARc-bA-lCt"/>
     </inferredMetricsTieBreakers>
 </document>
