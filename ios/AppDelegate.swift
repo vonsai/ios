@@ -18,15 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "accessToken")
         NSUserDefaults.standardUserDefaults().synchronize()
         
-        var api = Api()
+        /*var api = Api()
         api.auth( {
             lol, a in
             api.getArticles(false, beacon: nil) {
                 arts in
                 
-                println(arts[2].title)
+                println(arts[0].title)
             }
-        })
+        })*/
         // Override point for customization after application launch.
                 
         return true
