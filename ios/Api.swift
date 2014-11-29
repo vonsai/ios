@@ -12,7 +12,7 @@ class Api {
     
     let apiKey: String = "Test Api Key"
     let apiSecret: String = "Test Api Secret"
-    let apiBase: String = "http://192.168.1.101:5000/api"
+    let apiBase: String = "http://192.168.1.100:5000/api"
     
     var accessToken: String? {
         didSet {
