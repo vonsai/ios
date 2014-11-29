@@ -385,11 +385,11 @@
             </objects>
             <point key="canvasLocation" x="2211" y="472"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="IJA-4d-wgm">
             <objects>
                 <navigationController id="g8j-WF-4ix" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mpL-yS-0e0"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="mpL-yS-0e0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7GA-Gv-dV8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -19,7 +19,7 @@ class SavedVC: UITableViewController {
     }
     
     override func viewDidLoad() {
-        self.title = "Saved articles"
+        self.title = "Archive"
         super.viewDidLoad()
         self.loadArticles()
         //self.beacons()
